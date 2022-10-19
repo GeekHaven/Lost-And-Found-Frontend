@@ -1,13 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
 
 a {
   color: inherit;
@@ -15,5 +8,48 @@ a {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 360px) {
+  html,
+  body {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 411px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 411px) and (max-width: 769px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+#__next {
+  height: 100%;
+  width: 100vw;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  html,
+  body {
+    font-size: 12px;
+  }
 }
