@@ -2,14 +2,16 @@ import Category_Card from "../interfaces/CategoryCard";
 
 export default function Category() {
 	return (
-		<div className="category">
+		<div className="mt-24">
 			<div
-				className="head"
-				
+				className="text-2xl font-semibold"
+				style={{
+					marginLeft: "2vh",
+				}}
 			>
 				Categories :
 			</div>
-			<div className="cards">
+			<div className="" style={{ display: "flex", flexWrap: "wrap" }}>
 				<Category_Card />
 				<Category_Card />
 				<Category_Card />
