@@ -1,6 +1,6 @@
 .cards{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     padding: 5rem;
@@ -11,4 +11,11 @@
     padding-left: 6rem;
     font-size: 2rem;
     font-weight: 600;
+    padding-bottom: 2rem;
+}
+.list-head{
+    padding-left: 6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
 }
