@@ -1,0 +1,14 @@
+.cards{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+    padding-top: 1rem;
+}
+
+.head{
+    padding-left: 6rem;
+    font-size: 2rem;
+    font-weight: 600;
+}

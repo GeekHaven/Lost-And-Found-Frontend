@@ -1,7 +1,19 @@
-@import url('http://fonts.cdnfonts.com/css/open-sans-condensed-2');
+/* @import url('http://fonts.cdnfonts.com/css/open-sans-condensed-2'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face 
+{ 
+font-family: "Open Sans Condensed Bold";  
+src: url("../assets/font/OpenSans-CondBold.ttf"); 
+}
+
+@font-face 
+{ 
+font-family: "Open Sans Condensed Light";  
+src: url("../assets/font/OpenSans-CondLight.ttf"); 
+}
 
 a {
   color: inherit;
@@ -14,6 +26,9 @@ a {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
+
+
 
 @media screen and (max-width: 360px) {
   html,
@@ -54,3 +69,5 @@ a {
     font-size: 12px;
   }
 }
+
+
