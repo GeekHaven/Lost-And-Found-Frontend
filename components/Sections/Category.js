@@ -4,9 +4,7 @@ export default function Category() {
 	return (
 		<div className="category">
 			<div
-				className="head"
-				
-			>
+				className="head">
 				Categories :
 			</div>
 			<div className="cards">

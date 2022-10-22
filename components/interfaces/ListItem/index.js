@@ -1,9 +1,9 @@
 import Image from "next/image";
 export default function ListItem() {
     return (
-        <div className="flex flex-row gap-x-5 items-center pb-6 border-b-2 border-y-[rgba(0,0,0,0.25)]">
+        <div className="flex flex-row gap-x-5 items-center py-5 border-b-2 border-y-[rgba(0,0,0,0.25)">
             <div className="flex flex-row gap-x-11">
-                <div className="bg-slate-400 ml-20 w-24 h-24"></div>
+                <div className="bg-slate-400 ml-24 w-24 h-24 "></div>
                 <div className="flex flex-col gap-y-4">
                     <p className="text-2xl font-medium">Milton Water Bottle</p>
                     <p className="text-lg font-normal">
