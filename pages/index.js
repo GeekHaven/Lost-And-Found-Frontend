@@ -1,5 +1,5 @@
-import Found from "./Found";
-import Lost from "./Lost";
+import Found from "./found";
+import Lost from "./lost";
 
 export default function Home() {
 	return (
