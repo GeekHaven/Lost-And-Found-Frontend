@@ -52,7 +52,7 @@ export default function Footer() {
 					</div>
 				</div>
 				<div
-					className="w-full flex bg-[#000000] text-[#ffffff] justify-center font-light tracking-normal sm:-pb-2 border-inherit hidden sm:block sm:mt-7 sm:text-center"
+					className="w-full  bg-[#000000] text-[#ffffff] justify-center font-light tracking-normal sm:-pb-2 border-inherit hidden sm:flex sm:mt-7 sm:text-center"
 					style={{ fontFamily: ["Open Sans Condensed Light", "sans-serif"] }}
 				>	
 					&#169; Copyright&thinsp;&thinsp;
