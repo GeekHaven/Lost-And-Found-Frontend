@@ -2,12 +2,11 @@ import Image from "next/image";
 export default function ListItem() {
     return (
 			<div
-				className="flex flex-row gap-x-5 items-center pb-6 pt-6 border-b-2 border-y-[rgba(0,0,0,0.25)] "
+				className="flex flex-row gap-x-5 items-center pb-6 pt-6 border-b-2 border-y-[rgba(0,0,0,0.25)] justify-between"
 				style={{
 					marginLeft: "2vh",
-                    maxWidth: "75em"
+					maxWidth: "75em",
 				}}
-
 			>
 				<div className="flex flex-row gap-x-11 items-center">
 					<div className="bg-slate-400 w-24 h-24"></div>
@@ -20,7 +19,7 @@ export default function ListItem() {
 						</p>
 					</div>
 				</div>
-				<div style={{marginLeft:"10vw"}}>
+				<div style={{}}>
 					<p className="text-lg font-normal">Lost on:</p>
 					<p className="text-2xl font-medium">12/10/2022</p>
 				</div>

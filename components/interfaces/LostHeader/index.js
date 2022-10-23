@@ -5,13 +5,13 @@ export default function LostHeader() {
 		<>
 			<div className="flex flex-col gap-y-14 ml-4">
 				<h1 className="font-bold text-3xl">Lost Items</h1>
-				<button
-					className="h-14 rounded-md  border-solid border-2  border-[#121212] bg-black text-[#121212] font-normal text-xl"
-					style={{ width: "15vw", backgroundColor: "black" }}
-				>
-					Add lost item
-				</button>
 				<div className="flex flex-row gap-4 flex-wrap -mt-5">
+					<button
+						className="h-14 rounded-md  border-solid border-2  border-[#121212] bg-black text-[#121212] font-normal text-xl"
+						style={{ width: "15vw", backgroundColor: "black" }}
+					>
+						Add lost item
+					</button>
 					<div className="flex flex-row h-14" style={{ width: "40vw" }}>
 						<div
 							className="rounded-l-md bg-[#555555] border-solid border-2 border-black"
@@ -26,7 +26,7 @@ export default function LostHeader() {
 							/>
 						</div>
 						<div className="bg-[#000000] px-3 py-2 rounded-r-md flex items-center ">
-							<Image src={search} width={40} height={40} />
+							<Image src={search} width={30} height={30} />
 						</div>
 					</div>
 				</div>
