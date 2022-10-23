@@ -2,9 +2,8 @@ import Image from "next/image";
 export default function ListItem() {
     return (
 			<div
-				className="flex flex-row gap-x-5 items-center pb-6 pt-6 border-b-2 border-y-[rgba(0,0,0,0.25)] justify-between"
+				className="flex flex-row gap-x-5 items-center pb-6 pt-6 border-b-2 ml-[2vh] sm:m-0 border-y-[rgba(0,0,0,0.25)] justify-between sm:justify-center"
 				style={{
-					marginLeft: "2vh",
 					maxWidth: "90vw",
 				}}
 			>
