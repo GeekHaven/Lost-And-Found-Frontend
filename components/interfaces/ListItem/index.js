@@ -5,7 +5,7 @@ export default function ListItem() {
 				className="flex flex-row gap-x-5 items-center pb-6 pt-6 border-b-2 border-y-[rgba(0,0,0,0.25)] justify-between"
 				style={{
 					marginLeft: "2vh",
-					maxWidth: "75em",
+					maxWidth: "90vw",
 				}}
 			>
 				<div className="flex flex-row gap-x-11 items-center">
