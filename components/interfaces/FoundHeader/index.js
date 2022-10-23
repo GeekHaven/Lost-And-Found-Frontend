@@ -6,10 +6,10 @@ export default function FoundHeader() {
 			<div className="flex flex-col gap-y-14 ml-4">
 				<h1 className="font-bold text-3xl">Found Items</h1>
 				<div className="flex flex-row gap-4 flex-wrap -mt-5">
-					<div className="flex flex-row h-14" style={{ width: "40vw" }}>
+					<div className="flex flex-row h-14 ">
 						<div
 							className="rounded-l-md bg-[#555555] border-solid border-2 border-black"
-							style={{ width: "60vw" }}
+							style={{ width: "40vw" }}
 						>
 							<input
 								type="text"
@@ -20,7 +20,7 @@ export default function FoundHeader() {
 							/>
 						</div>
 						<div className="bg-[#000000] px-3 py-2 rounded-r-md flex items-center ">
-							<Image src={search} width={40} height={40} />
+							<Image src={search} width={30} height={30} />
 						</div>
 					</div>
 					<button className=" py-0 px-14  h-14 rounded-md  border-solid border-2  border-[#121212] bg-white text-[#121212] font-normal text-xl">
