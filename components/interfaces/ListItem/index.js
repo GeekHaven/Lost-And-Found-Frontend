@@ -9,17 +9,24 @@ export default function ListItem() {
 				}}
 			>
 				<div className="flex flex-row gap-x-11 items-center">
-					<div className="bg-slate-400 w-24 h-24"></div>
+					<div className="flex flex-col gap-y-4">
+						<div className="bg-slate-400 w-24 h-24 sm:w-28 sm:h-28"></div>
+						<div className="hidden sm:block sm:text-center sm:-mt-2">
+							<p className="text-lg font-normal sm:text-s">Lost on:</p>
+							<p className="text-2xl font-medium sm:text-xs">12/10/2022</p>
+						</div>
+					</div>
+
 					<div className="flex flex-col gap-y-4">
 						<p className="text-2xl font-medium">Milton Water Bottle</p>
-						<p className="text-lg font-normal" style={{ width: "40vw" }}>
+						<p className="text-lg font-normal w-[40vw] sm:w-[50vw]">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit.qwduhb2
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit...
 							<span className="text-lg font-semibold">Read More</span>
 						</p>
 					</div>
 				</div>
-				<div style={{}}>
+				<div className="sm:hidden">
 					<p className="text-lg font-normal">Lost on:</p>
 					<p className="text-2xl font-medium">12/10/2022</p>
 				</div>

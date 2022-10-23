@@ -7,14 +7,14 @@ import LostHeader from "../../components/interfaces/LostHeader/index";
 
 export default function Lost() {
     return (
-        <>
-            <Navbar />
-            <div className="p-16">
-                <LostHeader />
-                <Category />
-                <List />
-            </div>
-            <Footer />
-        </>
-    );
+			<>
+				<Navbar />
+				<div className="p-16 sm:p-6">
+					<LostHeader />
+					<Category />
+					<List />
+				</div>
+				<Footer />
+			</>
+		);
 }
