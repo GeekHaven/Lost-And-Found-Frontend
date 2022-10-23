@@ -3,71 +3,64 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face 
-{ 
-font-family: "Open Sans Condensed Bold";  
-src: url("../assets/font/OpenSans-CondBold.ttf"); 
+@font-face {
+    font-family: "Open Sans Condensed Bold";
+    src: url("../assets/font/OpenSans-CondBold.ttf");
 }
 
-@font-face 
-{ 
-font-family: "Open Sans Condensed Light";  
-src: url("../assets/font/OpenSans-CondLight.ttf"); 
+@font-face {
+    font-family: "Open Sans Condensed Light";
+    src: url("../assets/font/OpenSans-CondLight.ttf");
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-
-
-
 @media screen and (max-width: 360px) {
-  html,
-  body {
-    font-size: 9px;
-  }
+    html,
+    body {
+        font-size: 9px;
+    }
 }
 
 @media screen and (min-width: 360px) and (max-width: 411px) {
-  html,
-  body {
-    font-size: 12px;
-  }
+    html,
+    body {
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 411px) and (max-width: 769px) {
-  html,
-  body {
-    font-size: 12px;
-  }
+    html,
+    body {
+        font-size: 12px;
+    }
 }
 
-#__next {
-  height: 100%;
-  width: 100vw;
-}
+/* #__next {
+    height: 100%;
+    width: 100vw;
+} */
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  html,
-  body {
-    font-size: 12px;
-  }
+    html,
+    body {
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  html,
-  body {
-    font-size: 12px;
-  }
+    html,
+    body {
+        font-size: 12px;
+    }
 }
-
-
