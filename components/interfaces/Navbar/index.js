@@ -7,8 +7,8 @@ const navLinks = [
 		href: "/home",
 	},
 	{
-		title: "Submit",
-		href: "/submit",
+		title: "Instructions",
+		href: "/instructions",
 	},
 	{
 		title: "Lost",
