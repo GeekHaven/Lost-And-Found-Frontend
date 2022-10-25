@@ -4,15 +4,15 @@ import test3 from "../../assets/Home/test3.svg";
 import Image from "next/image";
 export default function Testimonials() {
     return (
-        <div className="flex flex-col items-center gap-y-20">
-            <div className="font-semibold text-5xl text-center">
-                See who we helped!
-            </div>
-            <div className="flex flex-row gap-x-14">
-                <Image src={test1} />
-                <Image src={test2} />
-                <Image src={test3} />
-            </div>
-        </div>
-    );
+			<div className="flex flex-col items-center gap-y-20">
+				<div className="font-semibold text-4xl text-center -mb-8">
+					See who we helped!
+				</div>
+				<div className="flex flex-row gap-x-14">
+					<Image src={test1} />
+					<Image src={test2} />
+					<Image src={test3} />
+				</div>
+			</div>
+		);
 }

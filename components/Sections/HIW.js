@@ -14,21 +14,21 @@ export default function HIW() {
 				<div className="flex flex-col gap-y-6 items-center">
 					<Image src={img1} />
 
-					<div className="font-normal text-base text-center ml-10">
+					<div className="font-normal text-lg text-center ml-10">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi
 						tincidunt pharetra Lorem ipsum dolor sit amet, consectetu
 					</div>
 				</div>
 				<div className="flex flex-col gap-y-6 items-center">
 					<Image src={img2} />
-					<div className="font-normal text-base text-center ml-10 ">
+					<div className="font-normal text-lg text-center ml-10 ">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi
 						tincidunt pharetra Lorem ipsum dolor sit amet, consectetu
 					</div>
 				</div>
 				<div className="flex flex-col gap-y-6 items-center">
 					<Image src={img3} />
-					<div className="font-normal text-base text-center ml-10">
+					<div className="font-normal text-lg text-center ml-10">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi
 						tincidunt pharetra Lorem ipsum dolor sit amet, consectetu
 					</div>
