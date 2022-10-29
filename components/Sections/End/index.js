@@ -1,7 +1,9 @@
 export default function End() {
     return (
 			<div className="flex flex-col items-center justify-center mt-32">
-				<div className="text-5xl font-normal text-center">
+				<div className="text-5xl font-normal text-center"
+				style={{letterSpacing:"1px"}}
+				>
 					Ready to meet up with <br /> your long lost things?
 				</div>
 				<div className="mt-[5rem]">
