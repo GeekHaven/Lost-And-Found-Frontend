@@ -5,11 +5,12 @@ import Hero from "../../components/Sections/Hero";
 import HIW from "../../components/Sections/HIW";
 import Testimonials from "../../components/Sections/Testimonials";
 import Footer from "./../../components/interfaces/Footer/index";
-
+import SEO from "../../components/utils/SEO";
 export default function Home() {
-	return (
-		<>
-			{/* <div className="flex flex-col bg-[#9e9e9e] items-center justify-center pt-20 pl-36 pr-36 gap-y-14">
+    return (
+        <>
+            <SEO title="Home / LostNFound" />
+            {/* <div className="flex flex-col bg-[#9e9e9e] items-center justify-center pt-20 pl-36 pr-36 gap-y-14">
 					<h1 className="text-7xl font-normal text-center">
 						What have you Lost/Found <br /> today ?
 					</h1>
@@ -22,15 +23,15 @@ export default function Home() {
 						</button>
 					</div>
 				</div> */}
-			<Navbar />
-			<div className="p-24">
-				<Hero />
-				<HIW />
-				<Aim />
-				<Testimonials />
-				<End />
-			</div>
-			<Footer />
-		</>
-	);
+            <Navbar />
+            <div className="p-24">
+                <Hero />
+                <HIW />
+                <Aim />
+                <Testimonials />
+                <End />
+            </div>
+            <Footer />
+        </>
+    );
 }

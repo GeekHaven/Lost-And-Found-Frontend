@@ -12,7 +12,10 @@
     font-family: "Open Sans Condensed Light";
     src: url("../assets/font/OpenSans-CondLight.ttf");
 }
-
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("../assets/font/Poppins/Poppins-Regular.ttf");
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -21,7 +24,7 @@ a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 @media screen and (max-width: 360px) {
@@ -45,10 +48,10 @@ a {
     }
 }
 
-/* #__next {
+#__next {
     height: 100%;
     width: 100vw;
-} */
+}
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     html,

@@ -1,27 +1,22 @@
-import Category_Card from "../../interfaces/CategoryCard";
+import CategoryCard from "../../interfaces/CategoryCard";
 
 export default function Category() {
     return (
-        <div className="mt-24">
-            <div
-                className="text-2xl font-semibold"
-                style={{
-                    marginLeft: "2vh",
-                }}
-            >
-                Categories :
+        <div className="mt-20 px-36">
+            <div className="text-4xl font-semibold text-[#575c75] ml-2 mb-12">
+                Categories
             </div>
             <div
-                className="sm:justify-around sm:p-4 sm:text-center"
+                className="sm:justify-around sm:p-4 sm:text-center gap-11"
                 style={{ display: "flex", flexWrap: "wrap" }}
             >
-                <Category_Card />
-                <Category_Card />
-                <Category_Card />
-                <Category_Card />
-                <Category_Card />
-                <Category_Card />
-                <Category_Card />
+                <CategoryCard />
+                <CategoryCard />
+                <CategoryCard />
+                <CategoryCard />
+                <CategoryCard />
+                <CategoryCard />
+                <CategoryCard />
             </div>
         </div>
     );
