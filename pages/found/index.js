@@ -9,7 +9,7 @@ export default function Found() {
         <>
             <SEO title="Found / LostNFound" />
             <Navbar />
-            <div className="p-16">
+            <div>
                 <FoundHeader />
                 <Category />
                 <List />
