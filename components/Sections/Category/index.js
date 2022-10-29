@@ -3,7 +3,7 @@ import CategoryCard from "../../interfaces/CategoryCard";
 export default function Category() {
     return (
         <div className="mt-20 px-36">
-            <div className="text-4xl font-semibold text-[#575c75] ml-2 mb-12">
+            <div className="text-4xl font-semibold text-[#575c75]  mb-12">
                 Categories
             </div>
             <div
