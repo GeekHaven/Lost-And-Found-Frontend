@@ -3,7 +3,7 @@ import SortPlaceholder from "../../../assets/logo/sort.svg";
 import Image from "next/image";
 export default function List() {
     return (
-        <div className="mt-20 px-36  mb-12">
+        <div className="mt-20 px-36  mb-12 flex flex-col gap-10">
             <div className="flex flex-row justify-between items-center">
                 <div className="text-4xl font-semibold text-[#575c75] ">
                     Complete List
@@ -15,11 +15,18 @@ export default function List() {
                     </span>
                 </div>
             </div>
-            <ListItem />
-            <ListItem />
-            <ListItem />
-            <ListItem />
-            <ListItem />
+            <div className="w-full">
+                <div className="bg-[#304ac1] rounded-xl py-7 text-[#ffffff]  flex flex-row justify-between items-center px-16 ">
+                    <div className="font-medium text-xl">Photo</div>
+                    <div className="font-medium text-xl">Name</div>
+                    <div className="font-medium text-xl">Description</div>
+                    <div className="font-medium text-xl">Date Lost</div>
+                    <div className="font-medium text-xl">Location</div>
+                </div>
+                <ListItem />
+                <ListItem />
+                <ListItem />
+            </div>
         </div>
     );
 }
