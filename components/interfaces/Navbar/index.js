@@ -26,7 +26,9 @@ export default function Navbar() {
 	return (
 		<div
 			className="w-full h-14 flex flex-row items-center justify-between sm:justify-center gap-x-14 p-12"
-			style={{ backgroundColor: "#ffffff" }}
+			style={{
+				backgroundColor: "#ffffff",
+			}}
 		>
 			<div className=" ml-16 text-[#304AC1] flex flex-row items-center justify-center w-96">
 				<Image src={logo} />
