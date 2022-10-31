@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getLS } from "../LocalStorage/index";
 
-const API_URL = "https://hackout-22.herokuapp.com/api";
+const API_URL = "http://192.168.101.114:7000";
 
 const getAccessToken = () => {
     return getLS("jwt_token");
@@ -10,11 +10,10 @@ const getAccessToken = () => {
 const getHeaders = (token) => {
     if (!token) token = getAccessToken();
     if (token) {
-        console.log(token);
         return {
             headers: {
                 Accept: "application/json",
-                Authorization: `Bearer ${token}`,
+                Authorization: `${token}`,
             },
         };
     }
