@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useRouter } from "next/router";
 import SignInForm from "../../components/interfaces/SignInForm";
 import SEO from "../../components/utils/SEO";
 import { post } from "../../components/utils/API";
-import axios from "axios";
 import { storeLS } from "../../components/utils/LocalStorage";
 export default function SignIn() {
     const router = useRouter();
