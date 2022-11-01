@@ -1,16 +1,25 @@
+import { useRouter } from "next/router";
 export default function End() {
+    const router = useRouter();
+    function handleLogin() {
+        router.push("/signin");
+    }
     return (
-			<div className="flex flex-col items-center justify-center mt-32">
-				<div className="text-5xl font-normal text-center"
-				style={{letterSpacing:"1px"}}
-				>
-					Ready to meet up with <br /> your long lost things?
-				</div>
-				<div className="mt-[5rem]">
-					<button className="p-3 rounded-md	 pl-8 pr-8 bg-[#5B5B5B] text-black">
-						Get Started
-					</button>
-				</div>
-			</div>
-		);
+        <div className="flex flex-col items-center justify-center mt-32">
+            <div
+                className="text-5xl font-semibold text-[#575c75] text-center leading-tight"
+                style={{ letterSpacing: "1px" }}
+            >
+                Ready to meet up with <br /> your long lost things?
+            </div>
+            <div className="mt-[5rem]">
+                <button
+                    className="px-24  py-3.5 bg-[#304ac1] text-[#ffffff] font-semibold text-2xl hover:bg-[#435cd0] rounded-lg"
+                    onClick={handleLogin}
+                >
+                    Get Started
+                </button>
+            </div>
+        </div>
+    );
 }

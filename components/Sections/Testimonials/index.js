@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Testimonials() {
     return (
         <div className="flex flex-col items-center gap-y-20">
-            <div className="font-semibold text-4xl text-center -mb-8">
+            <div className="font-semibold text-5xl text-center text-[#575c75] -mb-8">
                 See who we helped!
             </div>
             <div className="flex flex-row gap-x-14">

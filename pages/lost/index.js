@@ -17,9 +17,9 @@ export default function Lost() {
         if (hasMore) {
             let res = await get(`/lost/latest?pagesize=10&pagenumber=${page}`);
             if (page === res.data.total_pages) setHasMore(false);
-            console.log(res);
+            console.log(res.data.data);
             setData((prev) => {
-                return [...prev, res.data.data];
+                return [...prev, ...res.data.data];
             });
         }
     };
@@ -47,7 +47,7 @@ export default function Lost() {
             <div className="">
                 <LostHeader />
                 <Category />
-                <List fref={lastItemRef} />
+                <List fref={lastItemRef} data={data} />
             </div>
             <Footer />
         </>

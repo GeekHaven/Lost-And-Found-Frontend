@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
-export default function ListItem({ index }) {
+export default function ListItem({ index, item }) {
     return (
         <>
             <div
@@ -10,19 +10,23 @@ export default function ListItem({ index }) {
                 }}
             >
                 <div className="w-36 text-center">
-                    <Image src={ListItemPlaceholder} />
+                    <Image
+                        src={item.image || ListItemPlaceholder}
+                        height={150}
+                        width={150}
+                    />
                 </div>
                 <div className="font-normal text-lg text-[#0f1e57] w-48 text-center">
-                    Name
+                    {item.title}
                 </div>
                 <div className="font-normal text-lg text-[#0f1e57] w-[35vw] text-center">
-                    Milton Water Bottle
+                    {item.description}
                 </div>
                 <div className="font-semibold text-lg text-[#0f1e57] w-32 text-center">
                     12/10/2022
                 </div>
                 <div className="font-semibold text-lg text-[#0f1e57] w-32 text-center">
-                    CC3
+                    {item.location}
                 </div>
             </div>
         </>

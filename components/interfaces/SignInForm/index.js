@@ -4,12 +4,14 @@ export default function SignInForm() {
     const [password, setPassword] = useState(""),
         [showPassword, setShowPassword] = useState(false);
     return (
-        <form action="" className="w-full flex flex-col ">
-            <div>
+        <div className="w-full flex flex-col ">
+            <form action="" className="" method="post">
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
                 <div></div>
-                <div></div>
-            </div>
-            <div></div>
-        </form>
+            </form>
+        </div>
     );
 }

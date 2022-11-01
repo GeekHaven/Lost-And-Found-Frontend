@@ -27,3 +27,10 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+.logout {
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    color: #666666;
+}

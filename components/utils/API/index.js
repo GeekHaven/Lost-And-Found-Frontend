@@ -1,7 +1,7 @@
 import axios from "axios";
-import { getLS } from "../LocalStorage/index";
+import { getLS, removeLS } from "../LocalStorage/index";
 
-const API_URL = "http://192.168.101.114:7000";
+const API_URL = "http://172.19.14.44:7000";
 
 const getAccessToken = () => {
     return getLS("jwt_token");
@@ -34,6 +34,10 @@ const post = async (endpoint, body, token = null) => {
         return response;
     } catch (err) {
         console.error(err?.response?.data || err);
+        if (err?.response?.status === 401) {
+            console.log("Wrong password");
+            removeLS("jwt_token");
+        }
         return err?.response?.data || err;
     }
 };
@@ -45,6 +49,10 @@ const get = async (endpoint, token = null) => {
         return response;
     } catch (err) {
         console.error(err?.response?.data || err);
+        if (err?.response?.status === 401) {
+            console.log("Wrong password");
+            removeLS("jwt_token");
+        }
         return err?.response?.data || err;
     }
 };
@@ -59,6 +67,10 @@ const put = async (endpoint, body, token = null) => {
         return response.data;
     } catch (err) {
         console.error(err?.response?.data || err);
+        if (err?.response?.status === 401) {
+            console.log("Wrong password");
+            removeLS("jwt_token");
+        }
         return err?.response?.data || err;
     }
 };
@@ -72,6 +84,10 @@ const remove = async (endpoint, token = null) => {
         return response.data;
     } catch (err) {
         console.error(err?.response?.data || err);
+        if (err?.response?.status === 401) {
+            console.log("Wrong password");
+            removeLS("jwt_token");
+        }
         return err?.response?.data || err;
     }
 };

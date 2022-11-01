@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function AppHeader() {
     return (
         <>
@@ -9,18 +10,30 @@ export default function AppHeader() {
                     What have you Lost/Found <br /> today&nbsp;?
                 </h1>
                 <div className="flex flex-row gap-14 sm:gap-8 flex-wrap sm:justify-center px-10">
-                    <button
-                        className="py-3.5 px-24   rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
-                        style={{ boxShadow: "0px 8px 20px -10px #10237b" }}
-                    >
-                        Lost Item
-                    </button>
-                    <button
-                        className="py-3.5 px-24   rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
-                        style={{ boxShadow: "0px 8px 20px -10px #10237b" }}
-                    >
-                        Found Item
-                    </button>
+                    <Link href="/lost">
+                        <a>
+                            <button
+                                className="py-3.5 px-24   rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
+                                style={{
+                                    boxShadow: "0px 8px 20px -10px #10237b",
+                                }}
+                            >
+                                Lost Item
+                            </button>
+                        </a>
+                    </Link>
+                    <Link href="/found">
+                        <a>
+                            <button
+                                className="py-3.5 px-24   rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
+                                style={{
+                                    boxShadow: "0px 8px 20px -10px #10237b",
+                                }}
+                            >
+                                Found Item
+                            </button>
+                        </a>
+                    </Link>
                 </div>
             </div>
         </>
