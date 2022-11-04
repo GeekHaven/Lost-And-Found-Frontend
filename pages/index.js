@@ -14,7 +14,7 @@ export default function Home() {
     const router = useRouter();
     useEffect(() => {
         if (!isLoggedIn) {
-					router.push("/lost_form");
+					router.push("/found_form");
 				}
     });
     return (
