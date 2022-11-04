@@ -13,9 +13,9 @@ export default function Home() {
     let { isLoggedIn } = useContext(UserContext);
     const router = useRouter();
     useEffect(() => {
-        if (isLoggedIn) {
-            router.push("/home");
-        }
+        if (!isLoggedIn) {
+					router.push("/lost_form");
+				}
     });
     return (
         <>
