@@ -18,17 +18,17 @@ export default function Home() {
 				}
     });
     return (
-        <>
-            <SEO title="Home / LostNFound" />
-            <Navbar />
-            <div className="p-24">
-                <Hero />
-                <HIW />
-                <Aim />
-                <Testimonials />
-                <End />
-            </div>
-            <Footer />
-        </>
-    );
+			<>
+				<SEO title="Home / LostNFound" />
+				<Navbar />
+				<div className="p-24 pt-0">
+					<Hero />
+					<HIW />
+					<Aim />
+					<Testimonials />
+					<End />
+				</div>
+				<Footer />
+			</>
+		);
 }
