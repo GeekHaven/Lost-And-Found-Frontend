@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "antd/dist/antd.css";
+
 import { getAccessToken } from "../components/utils/API";
 import { NextUIProvider } from "@nextui-org/react";
 import { useRouter } from "next/router";

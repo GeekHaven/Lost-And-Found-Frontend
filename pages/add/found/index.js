@@ -5,6 +5,7 @@ import Footer from "../../../components/interfaces/Footer/index";
 import { FileUploader } from "react-drag-drop-files";
 const fileTypes = ["JPG", "PNG", "GIF"];
 import { IoCloseCircleOutline } from "react-icons/io5";
+import Dropdown from "./../../../components/interfaces/Dropdown/Dropdown";
 
 export default function found_form() {
 	const [file, setFile] = useState(null);
@@ -122,12 +123,9 @@ export default function found_form() {
 					<div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
 						<input type="text" placeholder="Title" className="bg-transparent" />
 					</div>
-					<div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
-						<input
-							className="bg-transparent"
-							type="text"
-							placeholder="Category"
-						/>
+					<div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pr-3">
+						<Dropdown />
+						
 					</div>
 
 					<textarea

@@ -6,6 +6,7 @@ import Footer from "../../../components/interfaces/Footer/index";
 import { FileUploader } from "react-drag-drop-files";
 import img2 from "../../../assets/illustrations/homepage2.png";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import Dropdown from "./../../../components/interfaces/Dropdown/Dropdown";
 
 const fileTypes = ["JPG", "PNG", "GIF"];
 
@@ -19,18 +20,16 @@ export default function lost_form() {
 		setFile(null);
 	}
 
-	async function submit(){
+	async function submit() {
 		let data = new FormData();
 		data["image"] = file;
 		let res = await post("/uploadimage", data);
 		if (res) {
 			let url = res.data?.url;
-			if(url){
-				let body = {
-					
-				}
+			if (url) {
+				let body = {};
 			}
-		}	
+		}
 	}
 
 	useEffect(() => {
@@ -63,12 +62,8 @@ export default function lost_form() {
 					<div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
 						<input type="text" placeholder="Title" className="bg-transparent" />
 					</div>
-					<div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
-						<input
-							className="bg-transparent"
-							type="text"
-							placeholder="Category"
-						/>
+					<div className="text-sm box-border py-2 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pr-3">
+						<Dropdown />
 					</div>
 
 					<textarea
