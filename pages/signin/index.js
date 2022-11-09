@@ -1,6 +1,5 @@
 import { useRef, useContext } from "react";
 import { useRouter } from "next/router";
-import SignInForm from "../../components/interfaces/SignInForm";
 import SEO from "../../components/utils/SEO";
 import { post } from "../../components/utils/API";
 import { storeLS } from "../../components/utils/LocalStorage";
@@ -17,7 +16,8 @@ export default function SignIn() {
     const { setIsLoggedIn } = useContext(UserContext);
     const [hide, setHide] = useState(true);
 
-    async function handleLogin() {
+    async function handleLogin(event) {
+        event.preventDefault();
         let res = await post("/auth", {
             username: username.current.value,
             password: password.current.value,
@@ -42,7 +42,10 @@ export default function SignIn() {
                 title="SignIn / LostNFound"
                 desc="SignIn to Lost And Found IIITA "
             />
-            <div className="flex flex-col w-screen justify-center items-center self-center my-auto">
+            <form
+                className="flex flex-col w-screen justify-center items-center self-center my-auto"
+                onSubmit={handleLogin}
+            >
                 <h1 className="font-semibold text-5xl mb-10 text-[#304AC1]">
                     Sign In
                 </h1>
@@ -85,12 +88,11 @@ export default function SignIn() {
                 </div>
                 <button
                     className="bg-[#304AC1] text-[#EBEFFA] h-11 w-96 rounded-md select-none"
-                    type="button"
-                    onClick={handleLogin}
+                    type="submit"
                 >
                     Sign In
                 </button>
-            </div>
+            </form>
             <div
                 className="w-full flex bg-transparemt text-[#262626] justify-center font-light tracking-normal pb-5 absolute bottom-0 select-none"
                 style={{

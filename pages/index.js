@@ -14,21 +14,21 @@ export default function Home() {
     const router = useRouter();
     useEffect(() => {
         if (isLoggedIn) {
-					router.push("/home");
-				}
+            router.push("/home");
+        }
     });
     return (
-			<>
-				<SEO title="Home / LostNFound" />
-				<Navbar />
-				<div className="p-24 pt-0">
-					<Hero />
-					<HIW />
-					<Aim />
-					<Testimonials />
-					<End />
-				</div>
-				<Footer />
-			</>
-		);
+        <>
+            <SEO title="Home / LostNFound" />
+            <Navbar />
+            <div className="p-24 pt-0">
+                <Hero />
+                <HIW />
+                <Aim />
+                <Testimonials />
+                <End />
+            </div>
+            <Footer />
+        </>
+    );
 }
