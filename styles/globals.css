@@ -53,12 +53,18 @@ a {
     width: 100vw;
 }
 
+.ant-select-selector{
+    background-color: #EBEFFA !important;
+    border: none !important;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     html,
     body {
         font-size: 12px;
     }
 }
+
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     html,
