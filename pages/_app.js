@@ -19,13 +19,15 @@ function MyApp({ Component, pageProps }) {
 
     async function checkUsr() {
         setShow(false);
-        let jwt_token = getAccessToken();
+        let jwt_token = await getAccessToken();
         if (jwt_token) {
             let res = await get("/self");
-            if (res.error) {
+            if (!res.username) {
                 removeLS("jwt_token");
                 jwt_token = false;
+                console.log("run");
             } else {
+                setIsLoggedIn(true);
                 setUser({ username: res.username, name: res.name });
             }
         }

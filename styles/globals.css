@@ -1,4 +1,6 @@
 /* @import url('http://fonts.cdnfonts.com/css/open-sans-condensed-2'); */
+@import "./antd.css";
+@import "./antd-mod.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,8 +55,8 @@ a {
     width: 100vw;
 }
 
-.ant-select-selector{
-    background-color: #EBEFFA !important;
+.ant-select-selector {
+    background-color: #ebeffa !important;
     border: none !important;
 }
 
@@ -64,7 +66,6 @@ a {
         font-size: 12px;
     }
 }
-
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     html,
