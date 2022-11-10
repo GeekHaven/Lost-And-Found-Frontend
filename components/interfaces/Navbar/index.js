@@ -50,10 +50,8 @@ export default function Navbar() {
             <div className="ml-[20vw] lg:ml-0 flex flex-row items-center justify-evenly w-[50vw] sm:hidden">
                 {!(router.route === "/" || router.route === "") &&
                     navLinks.map((navLink, i) => (
-                        <div className={styles.hoverUnderline}>
-                            <Link href={navLink.href} key={i}>
-                                {navLink.title}
-                            </Link>
+                        <div className={styles.hoverUnderline} key={i}>
+                            <Link href={navLink.href}>{navLink.title}</Link>
                         </div>
                     ))}
                 <div>
