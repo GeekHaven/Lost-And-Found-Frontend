@@ -9,7 +9,13 @@ import { FaUserAlt } from "react-icons/fa";
 import { IoMdLock } from "react-icons/io";
 import { BiHide, BiShow } from "react-icons/bi";
 import { useState } from "react";
-
+import { notification } from "antd";
+const openNotification = (placement) => {
+    notification.error({
+        description: "Wrong password",
+        placement,
+    });
+};
 export default function SignIn() {
     const router = useRouter();
     const username = useRef(null);
