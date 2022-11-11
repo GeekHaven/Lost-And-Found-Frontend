@@ -12,6 +12,8 @@ import { useRouter } from "next/router";
 export default function Home() {
     let { isLoggedIn } = useContext(UserContext);
     const router = useRouter();
+
+    // push to home if logged in
     useEffect(() => {
         if (isLoggedIn) {
             router.push("/home");

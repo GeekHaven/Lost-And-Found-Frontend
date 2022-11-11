@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 export default function List({ data, fref, sortBy, setSortBy }) {
     const router = useRouter();
-    console.log(router);
     return (
         <div className="mt-20 px-36  mb-12 flex flex-col gap-10">
             <div className="flex flex-row justify-between items-center">

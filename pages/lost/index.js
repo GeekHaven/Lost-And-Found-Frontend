@@ -9,18 +9,21 @@ import { get } from "../../components/utils/API";
 
 export default function Lost() {
     const observer = useRef();
-    const size = 10;
-    const [loading, setIsLoading] = useState(true);
-    const [data, setData] = useState([]);
-    const [page, setPage] = useState(1);
-    const [hasMore, setHasMore] = useState(true);
-    const [loadPage, setLoadPage] = useState(true);
-    const [categories, setCategories] = useState([]);
-    const [query, setQuery] = useState("");
-    const [selectedCategory, setSelectedCategory] = useState("");
-    const [sortBy, setSortBy] = useState(true);
+
+    const size = 10; //size per page for pagination
+
+    const [loading, setIsLoading] = useState(true),
+        [data, setData] = useState([]),
+        [page, setPage] = useState(1),
+        [hasMore, setHasMore] = useState(true),
+        [loadPage, setLoadPage] = useState(true),
+        [categories, setCategories] = useState([]),
+        [query, setQuery] = useState(""),
+        [selectedCategory, setSelectedCategory] = useState(""),
+        [sortBy, setSortBy] = useState(true);
 
     let lastLoadedPage = 0;
+
     const loadMoreItems = async () => {
         if (!loadPage) return;
         if (!hasMore) return;
@@ -40,7 +43,6 @@ export default function Lost() {
             setIsLoading(false);
             setHasMore(res.data.has_next_page);
             setLoadPage(false);
-            console.log(res.data.data);
             if (page !== lastLoadedPage) {
                 lastLoadedPage = page;
                 setData((prev) => {
@@ -54,6 +56,7 @@ export default function Lost() {
         }
     };
 
+    // to check for the last item in the list to call the next page
     const lastItemRef = useCallback(
         (node) => {
             if (loading) return;
@@ -61,22 +64,22 @@ export default function Lost() {
             observer.current = new IntersectionObserver((entries) => {
                 if (entries[0].isIntersecting && hasMore) {
                     setPage((prev) => {
-                        console.log(prev);
                         return prev + 1;
                     });
                 }
             });
             if (node) observer.current.observe(node);
-            // log(node);
         },
         [loading, hasMore]
     );
 
+    //get the categories of lost items
     async function getCategories() {
         let res = await get("/tag/categories");
         setCategories(res.data?.data);
     }
 
+    //use Effects
     useEffect(() => {
         getCategories();
         setData([]);
@@ -106,10 +109,11 @@ export default function Lost() {
     useEffect(() => {
         loadMoreItems();
     }, [loadPage]);
+    ////////////////////////
 
     return (
         <>
-            <SEO title="Lost / LostNFound" />
+            <SEO title="Lost / Lost&Found" />
             <Navbar />
             <div className="">
                 <LostHeader setQuery={setQuery} />

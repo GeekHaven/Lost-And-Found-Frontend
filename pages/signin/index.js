@@ -1,4 +1,4 @@
-import { useRef, useContext } from "react";
+import { useRef, useContext, useState } from "react";
 import { useRouter } from "next/router";
 import SEO from "../../components/utils/SEO";
 import { post } from "../../components/utils/API";
@@ -6,30 +6,27 @@ import { storeLS } from "../../components/utils/LocalStorage";
 import UserContext from "../../components/utils/Contexts/userContext";
 import { FaUserAlt } from "react-icons/fa";
 import { IoMdLock } from "react-icons/io";
-import { ImSpinner } from "react-icons/im";
 import { BiHide, BiShow } from "react-icons/bi";
-import { useState } from "react";
 import { notification } from "antd";
 
-import styles from "./Signin.module.css";
-
 export default function SignIn() {
-    const router = useRouter();
-    const username = useRef(null);
-    const password = useRef(null);
-    const usernameDiv = useRef(null);
-    const passwordDiv = useRef(null);
-    const { setIsLoggedIn } = useContext(UserContext);
+    const router = useRouter(),
+        username = useRef(null),
+        password = useRef(null),
+        usernameDiv = useRef(null),
+        passwordDiv = useRef(null),
+        { setIsLoggedIn } = useContext(UserContext),
+        [hide, setHide] = useState(true),
+        [loading, setLoading] = useState(false);
 
-    const [hide, setHide] = useState(true);
-    const [loading, setLoading] = useState(false);
-
+    // Animate on wrong credentials
     let wrongAnimate = [
         { transform: "translateX(20px)" },
         { transform: "translateX(-40px)" },
         { transform: "translateX(20px)" },
     ];
 
+    // handle login request
     async function handleLogin(event) {
         event.preventDefault();
         setLoading(true);
@@ -37,7 +34,6 @@ export default function SignIn() {
             username: username.current.value,
             password: password.current.value,
         });
-        console.log(res);
         if (res.data) {
             storeLS("jwt_token", res.data.secret);
             setIsLoggedIn(true);
@@ -50,7 +46,6 @@ export default function SignIn() {
                     "You have provided wrong username or password. Please try again.",
             });
             setLoading(false);
-
             username.current.value = "";
             password.current.value = "";
             usernameDiv.current.animate(wrongAnimate, { duration: 150 });
@@ -58,6 +53,7 @@ export default function SignIn() {
         }
     }
 
+    // function to handle password visibility
     function toggleShow() {
         setHide(!hide);
     }
@@ -65,7 +61,7 @@ export default function SignIn() {
     return (
         <div className="h-screen flex">
             <SEO
-                title="SignIn / LostNFound"
+                title="SignIn / Lost&Found"
                 desc="SignIn to Lost And Found IIITA "
             />
             <form

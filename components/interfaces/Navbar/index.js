@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BiUserCircle } from "react-icons/bi";
 import logo from "../../../assets/logo/nav_logo.svg";
 import styles from "./styles.module.css";
 import { useRouter } from "next/router";
@@ -25,13 +24,11 @@ const navLinks = [
 
 export default function Navbar() {
     let { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
-    console.log(isLoggedIn);
     const router = useRouter();
     function handleLogout() {
         removeLS("jwt_token");
         setIsLoggedIn(false);
     }
-    console.log(router);
     return (
 			<div
 				className="w-full sticky top-0 z-[999] h-8 flex flex-row items-center justify-between sm:justify-center gap-x-14 p-10"
