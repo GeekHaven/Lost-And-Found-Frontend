@@ -1,6 +1,8 @@
 import Image from "next/image";
 import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
+import { useRouter } from "next/router";
 export default function ListItem({ index, item, fref }) {
+    const router = useRouter();
     return (
         <>
             <div
@@ -24,7 +26,11 @@ export default function ListItem({ index, item, fref }) {
                     {item.description}
                 </div>
                 <div className="font-semibold text-lg text-[#0f1e57] w-32 text-center">
-                    12/10/2022
+                    {`${
+                        router.asPath === "/lost"
+                            ? item.lostDate
+                            : item.foundDate
+                    }`}
                 </div>
                 <div className="font-semibold text-lg text-[#0f1e57] w-32 text-center">
                     {item.location}

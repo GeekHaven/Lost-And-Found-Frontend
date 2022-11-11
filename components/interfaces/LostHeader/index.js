@@ -1,7 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import search from "../../../assets/logo/search.svg";
-export default function LostHeader() {
+import { useRef } from "react";
+
+export default function LostHeader({ setQuery }) {
+    let qinput = useRef(null);
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        setQuery(qinput.current.value);
+    }
+
     return (
         <>
             <div
@@ -17,25 +26,33 @@ export default function LostHeader() {
                             Add lost item
                         </button>
                     </Link>
-                    <div className="flex flex-row  sm:w-full">
+                    <form
+                        className="flex flex-row  sm:w-full"
+                        onSubmit={handleSubmit}
+                    >
                         <div className="rounded-l-md  border-solid border-4 border-[#304ac1] w-[40vw] sm:w-full">
                             <input
                                 type="text"
                                 name="text"
                                 id="text"
+                                ref={qinput}
                                 placeholder="Search lost items list..."
+                                autocomplete="off"
                                 className=" rounded-l-md h-full w-full  text-xl text-[#abadba] placeholder:text-[#abadba] placeholder:font-normal placeholder:text-xl p-6"
                             />
                         </div>
-                        <div className=" px-3 py-2 rounded-r-md border-solid border-t-4 border-r-4 border-b-4 border-[#304ac1] flex items-center ">
+                        <button
+                            className=" px-3 py-2 rounded-r-md border-solid border-t-4 border-r-4 border-b-4 border-[#304ac1] flex items-center "
+                            type="submit"
+                        >
                             <Image
                                 src={search}
                                 width={40}
                                 height={40}
                                 className="scale-50"
                             />
-                        </div>
-                    </div>
+                        </button>
+                    </form>
                 </div>
             </div>
         </>
