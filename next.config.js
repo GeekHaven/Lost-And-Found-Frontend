@@ -3,7 +3,7 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     images: {
-        domains: ["smf-file-storage.s3.ap-south-1.amazonaws.com"],
+        domains: ["smf-file-storage.s3.ap-south-1.amazonaws.com", "localhost"],
     },
 };
 

@@ -75,8 +75,12 @@ export default function Lost() {
 
     //get the categories of lost items
     async function getCategories() {
-        let res = await get("/tag/categories");
-        setCategories(res.data?.data);
+        try {
+            let res = await get("/tag/categories");
+            setCategories(res.data?.data);
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     //use Effects
