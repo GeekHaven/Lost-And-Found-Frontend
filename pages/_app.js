@@ -19,11 +19,12 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
     const publicPath = ["/", "/signin"];
-    const [show, setShow] = useState(false);
-    const router = useRouter(),
+    const router = useRouter();
+    const [show, setShow] = useState(false),
         [isLoggedIn, setIsLoggedIn] = useState(false),
         [user, setUser] = useState(null);
 
+    // check if user is logged in
     async function checkUsr() {
         if (publicPath.includes(router.asPath)) {
             setShow(true);
@@ -41,9 +42,10 @@ function MyApp({ Component, pageProps }) {
     }
 
     useEffect(() => {
-        if (!router.isReady) return;
+        if (!router.isReady) return; //if router is not availble till then return
         checkUsr();
     }, [isLoggedIn, router.isReady]);
+
     return (
         <NextUIProvider>
             <UserContext.Provider

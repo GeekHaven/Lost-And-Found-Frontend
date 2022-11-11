@@ -44,7 +44,6 @@ const post = async (endpoint, body, token = null) => {
 
 const get = async (endpoint, token = null) => {
     try {
-        console.log(token);
         const response = await axios.get(API_URL + endpoint, getHeaders(token));
         return response;
     } catch (err) {

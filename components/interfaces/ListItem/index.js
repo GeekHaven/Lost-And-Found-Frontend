@@ -1,8 +1,14 @@
 import Image from "next/image";
 import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
 import { useRouter } from "next/router";
-export default function ListItem({ index, item, fref }) {
+export default function ListItem({ item, fref }) {
     const router = useRouter();
+    let date;
+    if (router.asPath === "/lost") {
+        date = new Date(item.lostDate);
+    } else {
+        date = new Date(item.foundDate);
+    }
     return (
         <>
             <div
@@ -26,11 +32,7 @@ export default function ListItem({ index, item, fref }) {
                     {item.description}
                 </div>
                 <div className="font-semibold text-lg text-[#0f1e57] w-32 text-center">
-                    {`${
-                        router.asPath === "/lost"
-                            ? item.lostDate
-                            : item.foundDate
-                    }`}
+                    {date.toLocaleDateString()}
                 </div>
                 <div className="font-semibold text-lg text-[#0f1e57] w-32 text-center">
                     {item.location}

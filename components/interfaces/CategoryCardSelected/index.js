@@ -1,11 +1,13 @@
 import Image from "next/image";
-import CategoryCardPlaceholder from "../../../assets/logo/CategoryCardPlaceholder.svg";
 import { BsCheckCircleFill } from "react-icons/bs";
+import CategoryCardPlaceholder from "../../../assets/logo/CategoryCardPlaceholder.svg";
 
 export default function CategoryCardSelected({ data, setSelectedCategory }) {
+    //unset the selected category card
     function handleClick() {
         setSelectedCategory("");
     }
+
     return (
         <div
             className="flex flex-col items-center bg-[#e69d96] cursor-pointer border-4 border-[#304AC1] relative"
@@ -31,12 +33,10 @@ export default function CategoryCardSelected({ data, setSelectedCategory }) {
                 />
             </div>
             <div>
-                <img
-                    src={data.img}
-                    style={{
-                        width: "200px",
-                        height: "148px",
-                    }}
+                <Image
+                    src={data.img || CategoryCardPlaceholder}
+                    width="200px"
+                    height="148px"
                 />
             </div>
             <div className="bg-[#f2f2f2]">

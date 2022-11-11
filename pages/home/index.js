@@ -8,7 +8,7 @@ import SEO from "../../components/utils/SEO";
 export default function Instructions() {
     return (
         <>
-            <SEO title="Home / LostNFound" />
+            <SEO title="Home / Lost&Found" />
             <Navbar />
             <AppHeader />
             <div className="flex flex-row mx-36 my-20 sm:flex-col sm:m-12 sm:mt-24 gap-x-32 lg:gap-x-8 text-[#575C75]">

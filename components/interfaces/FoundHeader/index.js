@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import search from "../../../assets/logo/search-white.svg";
-export default function FoundHeader() {
+import { useRef } from "react";
+export default function FoundHeader({ setQuery }) {
+    let qinput = useRef(null);
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        setQuery(qinput.current.value);
+    }
+
     return (
         <>
             <div
@@ -12,25 +20,30 @@ export default function FoundHeader() {
                     Found Items
                 </h1>
                 <div className="flex flex-row gap-14 flex-wrap ">
-                    <div className="flex flex-row  sm:w-full">
+                    <form
+                        className="flex flex-row  sm:w-full"
+                        onSubmit={handleSubmit}
+                    >
                         <div className="rounded-l-m w-[40vw] sm:w-full">
                             <input
                                 type="text"
                                 name="text"
                                 id="text"
+                                ref={qinput}
                                 placeholder="Search found items list..."
                                 className=" rounded-l-md h-full w-full bg-[#5067D3] text-[#ffffff] text-xl placeholder:text-[#ffffff] placeholder:font-normal placeholder:text-xl p-6"
+                                autocomplete="off"
                             />
                         </div>
-                        <div className=" px-3 py-2 rounded-r-md  bg-[#304AC1]  flex items-center ">
+                        <button className=" px-3 py-2 rounded-r-md  bg-[#304AC1]  flex items-center ">
                             <Image
                                 src={search}
                                 width={40}
                                 height={40}
                                 className="scale-75"
                             />
-                        </div>
-                    </div>
+                        </button>
+                    </form>
                     <Link href="/add/found">
                         <button className="py-4 px-16 rounded-lg bg-[#ffffff] text-[#304AC1] border-solid border-4 border-[#304ac1] font-normal text-2xl  sm:text-lg">
                             Add found item

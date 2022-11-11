@@ -12,6 +12,8 @@ import { useRouter } from "next/router";
 export default function Home() {
     let { isLoggedIn } = useContext(UserContext);
     const router = useRouter();
+
+    // push to home if logged in
     useEffect(() => {
         if (isLoggedIn) {
             router.push("/home");
@@ -19,7 +21,7 @@ export default function Home() {
     });
     return (
         <>
-            <SEO title="Home / LostNFound" />
+            <SEO title="Home / Lost&Found" />
             <Navbar />
             <div className="p-24 pt-0">
                 <Hero />
