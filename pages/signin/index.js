@@ -105,13 +105,13 @@ export default function SignIn() {
                         ref={password}
                     />
                     {hide ? (
-                        <BiShow
+                        <BiHide
                             className="h-6 w-6 self-start my-auto ml-auto mr-3 cursor-pointer"
                             color="#262626"
                             onClick={toggleShow}
                         />
                     ) : (
-                        <BiHide
+                        <BiShow
                             className="h-6 w-6 self-start my-auto ml-auto mr-3 cursor-pointer"
                             color="#262626"
                             onClick={toggleShow}

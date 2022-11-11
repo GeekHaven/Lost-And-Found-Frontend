@@ -8,17 +8,17 @@ import SEO from "../../components/utils/SEO";
 export default function Instructions() {
     return (
         <>
-            <SEO title="Instructions/LostNFound" />
+            <SEO title="Home / LostNFound" />
             <Navbar />
             <AppHeader />
-            <div className="flex flex-row m-28 sm:flex-col sm:m-12 sm:mt-24 gap-x-32 lg:gap-x-8 text-[#575C75]">
+            <div className="flex flex-row mx-36 my-20 sm:flex-col sm:m-12 sm:mt-24 gap-x-32 lg:gap-x-8 text-[#575C75]">
                 <div className="flex flex-col gap-y-10 max-w-[45vw] sm:max-w-[90vw]">
                     <div className="flex flex-col gap-y-3 sm:text-center">
-                        <p className="font-semibold text-4xl">
-                            Lost something?
+                        <p className="font-semibold text-2xl font-['Poppins'] ">
+                            Instructions for Lost:
                         </p>
-                        <p className="font-normal text-2xl -mt-0.5">
-                            Don’t panic! Hope is still there.
+                        <p className="font-normal text-xl -mt-0.5">
+                            Hope is still there.
                         </p>
                     </div>
                     <div className="hidden  sm:max-w-32 sm:flex sm:justify-center">

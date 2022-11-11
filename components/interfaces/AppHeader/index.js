@@ -4,9 +4,9 @@ export default function AppHeader() {
         <>
             <div
                 className="flex flex-col gap-y-16 sm:gap-y-12 pt-16 pb-32 items-center justify-center"
-                style={{ boxShadow: "0 30px 40px -5px rgba(0, 0, 0, 0.15)" }}
+                style={{ boxShadow: "0 4px 16px -5px rgba(0, 0, 0, 0.15)" }}
             >
-                <h1 className="font-medium text-6xl md:text-5xl sm:px-32 sm:text-center sm:leading-tight text-[#575C75] text-center leading-12 ">
+                <h1 className="font-semibold text-5xl font-['Open Sans'] md:text-5xl sm:px-32 sm:text-center sm:leading-tight text-[#091553] text-center leading-12 ">
                     What have you Lost/Found <br /> today&nbsp;?
                 </h1>
                 <div className="flex flex-row gap-14 sm:gap-8 flex-wrap sm:justify-center px-10">

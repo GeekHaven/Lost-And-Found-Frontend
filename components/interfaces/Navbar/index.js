@@ -51,7 +51,11 @@ export default function Navbar() {
                 {!(router.route === "/" || router.route === "") &&
                     navLinks.map((navLink, i) => (
                         <div className={styles.hoverUnderline} key={i}>
-                            <Link href={navLink.href}>{navLink.title}</Link>
+                            <Link href={navLink.href}>
+                                <span className="cursor-pointer">
+                                    {navLink.title}
+                                </span>
+                            </Link>
                         </div>
                     ))}
                 <div>

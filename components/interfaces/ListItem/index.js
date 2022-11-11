@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
-export default function ListItem({ index, item }) {
+export default function ListItem({ index, item, fref }) {
     return (
         <>
             <div
@@ -8,6 +8,7 @@ export default function ListItem({ index, item }) {
                 style={{
                     boxShadow: "0px 8px 12px -10px rgba(84, 84, 84, 0.8)",
                 }}
+                ref={fref}
             >
                 <div className="w-36 text-center">
                     <Image
