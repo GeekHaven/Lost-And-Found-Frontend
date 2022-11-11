@@ -11,7 +11,7 @@ export default function Instructions() {
             <SEO title="Home / Lost&Found" />
             <Navbar />
             <AppHeader />
-            <div className="flex flex-row mx-36 my-20 sm:flex-col sm:m-12 sm:mt-24 gap-x-32 lg:gap-x-8 text-[#575C75]">
+            <div className="flex flex-row mx-36 my-20 sm:flex-col sm:m-12 sm:mt-24 gap-x-32 lg:gap-x-8 text-[#575C75] bg-[#FAFAFA]">
                 <div className="flex flex-col gap-y-10 max-w-[45vw] sm:max-w-[90vw]">
                     <div className="flex flex-col gap-y-3 sm:text-center">
                         <p className="font-semibold text-2xl font-['Poppins'] ">
