@@ -9,7 +9,7 @@ export default function Aim() {
 					Why Lost&Found?
 				</div>
 			</div>
-			<div className="flex justify-evenly">
+			<div className="flex justify-between">
 				<div className="w-[45%] ml-24 mt-4">
 					<ul className="px-4" style={{ listStyleType: "disc" }}>
 						<li className="text-lg font-normal text-[#6d7392]">
@@ -32,7 +32,7 @@ export default function Aim() {
 						</li>
 					</ul>
 				</div>
-				<div className="flex items-center scale-[85%]">
+				<div className="flex items-center mr-16 ">
 					<Image src={img1} />
 				</div>
 			</div>

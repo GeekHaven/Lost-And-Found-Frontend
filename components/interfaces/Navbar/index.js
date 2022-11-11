@@ -33,42 +33,38 @@ export default function Navbar() {
     }
     console.log(router);
     return (
-        <div
-            className="w-full h-14 flex flex-row items-center justify-between sm:justify-center gap-x-14 p-12"
-            style={{
-                backgroundColor: "#ffffff",
-            }}
-        >
-            <Link href="/">
-                <div className=" ml-16 text-[#304AC1] flex flex-row items-center justify-center w-96 cursor-pointer">
-                    <Image src={logo} />
-                    <div className="ml-4 font-semibold text-2xl w-64">
-                        Lost&Found IIITA
-                    </div>
-                </div>
-            </Link>
-            <div className="ml-[20vw] lg:ml-0 flex flex-row items-center justify-evenly w-[50vw] sm:hidden">
-                {!(router.route === "/" || router.route === "") &&
-                    navLinks.map((navLink, i) => (
-                        <div className={styles.hoverUnderline} key={i}>
-                            <Link href={navLink.href}>
-                                <span className="cursor-pointer">
-                                    {navLink.title}
-                                </span>
-                            </Link>
-                        </div>
-                    ))}
-                <div>
-                    {isLoggedIn && (
-                        <button
-                            onClick={handleLogout}
-                            className={styles.logout}
-                        >
-                            Logout
-                        </button>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
+			<div
+				className="w-full sticky top-0 z-[999] h-8 flex flex-row items-center justify-between sm:justify-center gap-x-14 p-10"
+				style={{
+					boxShadow: "0 10px 10px -5px rgba(0, 0, 0, 0.15)",
+					backgroundColor: "#ffffff",
+				}}
+			>
+				<Link href="/">
+					<div className=" ml-28 text-[#304AC1] flex flex-row items-center justify-center w-96 cursor-pointer">
+						<Image src={logo} />
+						<div className="ml-4 font-[600] text-xl w-64 tracking-tight		">
+							Lost&Found IIITA
+						</div>
+					</div>
+				</Link>
+				<div className="ml-[20vw] lg:ml-0 flex flex-row items-center justify-evenly w-[50vw] sm:hidden">
+					{!(router.route === "/" || router.route === "") &&
+						navLinks.map((navLink, i) => (
+							<div className={styles.hoverUnderline} key={i}>
+								<Link href={navLink.href}>
+									<span className="cursor-pointer">{navLink.title}</span>
+								</Link>
+							</div>
+						))}
+					<div>
+						{isLoggedIn && (
+							<button onClick={handleLogout} className={styles.logout}>
+								Logout
+							</button>
+						)}
+					</div>
+				</div>
+			</div>
+		);
 }
