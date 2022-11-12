@@ -38,7 +38,7 @@ export default function LostHeader({ setQuery }) {
                                 id="text"
                                 ref={qinput}
                                 placeholder="Search lost items list..."
-                                autocomplete="off"
+                                autoComplete="off"
                                 className=" rounded-l-md h-full w-full  text-xl text-[#abadba] placeholder:text-[#abadba] placeholder:font-normal placeholder:text-xl p-6"
                             />
                         </div>

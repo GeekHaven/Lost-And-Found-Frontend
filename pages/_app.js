@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
             return;
         }
         setShow(false);
-        let jwt_token = await getAccessToken();
+        let jwt_token = getAccessToken();
         if (jwt_token) {
             setIsLoggedIn(true);
         }

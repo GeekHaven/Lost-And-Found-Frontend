@@ -1,6 +1,6 @@
-const getLS = async (key) => {
+const getLS = (key) => {
     try {
-        return await localStorage.getItem(key);
+        return localStorage.getItem(key);
     } catch (e) {
         return null;
     }

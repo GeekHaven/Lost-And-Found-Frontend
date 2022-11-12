@@ -19,20 +19,6 @@ export default function CategoryCardSelected({ data, setSelectedCategory }) {
             onClick={handleClick}
         >
             <div>
-                <BsCheckCircleFill
-                    color="#304AC1"
-                    size={30}
-                    style={{
-                        position: "absolute",
-                        backgroundColor: "white",
-                        borderRadius: "50%",
-                        top: 0,
-                        right: 0,
-                        transform: "translate(50%, -50%)",
-                    }}
-                />
-            </div>
-            <div>
                 <Image
                     src={data.img || CategoryCardPlaceholder}
                     width="200px"
@@ -48,6 +34,20 @@ export default function CategoryCardSelected({ data, setSelectedCategory }) {
                     }}
                 >
                     {data.name}
+                </div>
+                <div>
+                    <BsCheckCircleFill
+                        color="#304AC1"
+                        size={30}
+                        style={{
+                            position: "absolute",
+                            backgroundColor: "white",
+                            borderRadius: "50%",
+                            top: 0,
+                            right: 0,
+                            transform: "translate(50%, -50%)",
+                        }}
+                    />
                 </div>
             </div>
         </div>
