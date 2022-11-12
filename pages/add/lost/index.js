@@ -113,6 +113,13 @@ export default function lost_form() {
     useEffect(() => {
         getCategories();
     }, []);
+    const onChange = (value, dateString) => {
+        console.log("Selected Time: ", value);
+        console.log("Formatted Selected Time: ", dateString);
+    };
+    const onOk = (value) => {
+        console.log("onOk: ", value);
+    };
 
     return (
         <>
