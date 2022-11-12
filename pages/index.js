@@ -23,7 +23,7 @@ export default function Home() {
 			<>
 				<SEO title="Home / LostNFound" />
 				<Navbar />
-				<div className="p-24 pt-0 bg-[#FAFAFA]">
+				<div className="p-24 sm:p-10 pt-0 bg-[#FAFAFA]">
 					<Hero />
 					<HIW />
 					<Aim />

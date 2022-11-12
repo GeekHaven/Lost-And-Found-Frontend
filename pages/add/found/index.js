@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { FileUploader } from "react-drag-drop-files";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import Dropdown from "./../../../components/interfaces/Dropdown/Dropdown";
-import Navbar from "../../../components/interfaces/Navbar";
+import Navbar2 from "../../../components/interfaces/Navbar2";
 import SEO from "../../../components/utils/SEO";
 import Footer from "../../../components/interfaces/Footer/index";
 import { DatePicker } from "antd";
@@ -69,7 +69,7 @@ export default function found_form() {
     return (
         <>
             <SEO title="Found / Lost&Found" />
-            <Navbar />
+            <Navbar2 />
             <div className="h-screen flex">
                 <div className="flex flex-col w-screen justify-center items-center self-center my-auto">
                     <h1 className="font-semibold text-5xl mb-10 text-[#304AC1]">

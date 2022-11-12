@@ -14,23 +14,24 @@ export default function LostHeader({ setQuery }) {
     return (
         <>
             <div
-                className="flex flex-col gap-y-16 pt-16 pb-32 items-center justify-center"
-                style={{ boxShadow: "0 30px 40px -5px rgba(0, 0, 0, 0.15)" }}
+                className="flex flex-col gap-y-16 pt-16 pb-32 sm:pb-8 sm:pt-8 items-center justify-center bg-[#FFFFFF]"
+               style={{ boxShadow: "0 8px 12px -5px rgba(0, 0, 0, 0.15)" }}
             >
-                <h1 className="font-semibold text-9xl text-[#575C75]">
+                <h1 className="font-semibold text-[6rem] text-[#575C75] sm:text-[4rem] sm:mb-2">
                     Lost Items
                 </h1>
-                <div className="flex flex-row gap-14 flex-wrap ">
+                <div className="flex flex-row gap-14 flex-wrap -mt-24 scale-75 sm:scale-50  sm:justify-center">
                     <Link href="/add/lost">
-                        <button className="py-4 px-16   rounded-lg   bg-[#304AC1] text-[#ffffff] font-normal text-2xl  sm:text-lg">
-                            Add lost item
+                        <button className="py-4 px-16 rounded-xl sm:scale-125  bg-[#304AC1] text-[#ffffff] font-normal text-2xl  sm:text-lg">
+                            <span className="font-[600]">Add lost item</span>
+                            
                         </button>
                     </Link>
                     <form
                         className="flex flex-row  sm:w-full"
                         onSubmit={handleSubmit}
                     >
-                        <div className="rounded-l-md  border-solid border-4 border-[#304ac1] w-[40vw] sm:w-full">
+                        <div className="rounded-l-xl  border-solid border-4 border-r-0 border-[#304ac1] w-[40vw] sm:w-full ">
                             <input
                                 type="text"
                                 name="text"
@@ -42,7 +43,7 @@ export default function LostHeader({ setQuery }) {
                             />
                         </div>
                         <button
-                            className=" px-3 py-2 rounded-r-md border-solid border-t-4 border-r-4 border-b-4 border-[#304ac1] flex items-center "
+                            className=" px-3 py-2 rounded-r-xl -ml-1 border-solid border-t-4 border-r-4 border-b-4 border-[#304ac1] flex items-center "
                             type="submit"
                         >
                             <Image

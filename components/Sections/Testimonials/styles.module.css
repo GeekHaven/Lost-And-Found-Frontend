@@ -1,0 +1,70 @@
+
+ .container {
+	 width: 80%;
+	 position: relative;
+	 perspective: 3000px;
+	 left: 9.5%;
+}
+ #carousel {
+	 position: relative;
+}
+ #carousel figure {
+	 display: block;
+	 animation: rotate 30000ms ease-in-out infinite;
+	 position: absolute;
+	 background-color: white;
+	 padding: 0;
+	 text-align: center;
+}
+
+ #carousel figure:nth-child(0) {
+	 animation-delay: -30000ms;
+}
+ #carousel figure:nth-child(1) {
+	 animation-delay: -22500ms;
+}
+ #carousel figure:nth-child(2) {
+	 animation-delay: -15000ms;
+}
+ #carousel figure:nth-child(3) {
+	 animation-delay: -7500ms;
+}
+ #carousel figure:nth-child(4) {
+	 animation-delay: 0ms;
+}
+ #carousel figure:nth-child(5) {
+	 animation-delay: 7500ms;
+}
+ #carousel figure:nth-child(6) {
+	 animation-delay: 15000ms;
+}
+ @keyframes rotate {
+	 0%, 20%, 99.7619047619%, 100% {
+		 transform: rotateY(45deg) scale(0.8);
+		 right: 0;
+		 z-index: -1;
+		 -webkit-filter: opacity(100%) blur(2px);
+	}
+	 24.7619047619%, 45% {
+		 transform: rotateY(0deg) scale(1);
+		 right: 40%;
+		
+		 z-index: 100;
+		 -webkit-filter: opacity(100%) blur(0px);
+	}
+	 49.7619047619%, 70% {
+		 transform: rotateY(-45deg) scale(0.8);
+		 right: 81%;
+		
+		 z-index: -1;
+		 -webkit-filter: opacity(100%) blur(2px);
+	}
+	 74.7619047619%, 95% {
+		 transform: rotateY(-90deg) scale(0);
+		 right: 0%;
+		 
+		 z-index: 0;
+		 -webkit-filter: opacity(0%) blur(0px);
+	}
+}
+ 

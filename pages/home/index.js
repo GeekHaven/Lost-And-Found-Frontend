@@ -1,4 +1,4 @@
-import Navbar from "../../components/interfaces/Navbar";
+import Navbar2 from "../../components/interfaces/Navbar2";
 import AppHeader from "../../components/interfaces/AppHeader";
 import LostVector from "../../assets/illustrations/homepage1.png";
 import FoundVector from "../../assets/illustrations/homepage2.png";
@@ -7,25 +7,25 @@ import Image from "next/image";
 import SEO from "../../components/utils/SEO";
 export default function Instructions() {
     return (
-        <>
+        <div className="bg-[#FAFAFA]">
             <SEO title="Home / Lost&Found" />
-            <Navbar />
+            <Navbar2 />
             <AppHeader />
             <div className="flex flex-row mx-36 my-20 sm:flex-col sm:m-12 sm:mt-24 gap-x-32 lg:gap-x-8 text-[#575C75] bg-[#FAFAFA]">
                 <div className="flex flex-col gap-y-10 max-w-[45vw] sm:max-w-[90vw]">
                     <div className="flex flex-col gap-y-3 sm:text-center">
-                        <p className="font-semibold text-2xl font-['Poppins'] ">
-                            Instructions for Lost:
+                        <p className="font-semibold text-3xl font-['Poppins'] ">
+                            Lost Something?
                         </p>
-                        <p className="font-normal text-xl -mt-0.5">
-                            Hope is still there.
+                        <p className="font-normal text-2xl -mt-8">
+                            Hope is still there!
                         </p>
                     </div>
                     <div className="hidden  sm:max-w-32 sm:flex sm:justify-center">
                         <Image src={LostVector} alt="" />
                     </div>
                     <ul
-                        className="px-4 text-[#575C75]"
+                        className="px-4 text-[#6D7392] ml-4 -mt-4"
                         style={{ listStyleType: "disc" }}
                     >
                         <li className="text-lg font-normal">
@@ -57,7 +57,50 @@ export default function Instructions() {
                     <Image src={LostVector} />
                 </div>
             </div>
-            <div className="flex flex-row m-28 sm:flex-col sm:m-12 sm:mt-24 gap-x-32">
+            <div className="flex flex-row mx-36 my-20 sm:flex-col sm:m-12 sm:mt-24 gap-x-32 lg:gap-x-8 text-[#575C75] bg-[#FAFAFA]">
+                <div className="flex flex-col gap-y-10 max-w-[45vw] sm:max-w-[90vw]">
+                    <div className="flex flex-col gap-y-3 sm:text-center">
+                        <p className="font-semibold text-3xl font-['Poppins'] ">
+                            Found Something?
+                        </p>
+                        <p className="font-normal text-2xl -mt-8">
+                            You guys are the real heroes!
+                        </p>
+                    </div>
+                    <div className="hidden  sm:max-w-32 sm:flex sm:justify-center">
+                        <Image src={FoundVector} alt="" />
+                    </div>
+                    <ul
+                        className="px-4 text-[#6D7392] ml-4 -mt-4"
+                        style={{ listStyleType: "disc" }}
+                    >
+                        <li className="text-lg font-normal">
+                            Login to the Lost&Found App and click on Lost Item.
+                        </li>
+                        <li className="text-lg font-normal">
+                            Use the search bar to search the Lost Items list for the item that you have
+found. If someone has already posted a lost ad for it, you can contact the
+owner and give back the item!
+                        </li>
+                        <li className="text-lg font-normal">
+                            If not, go back to the home page and click on Found Item.
+                        </li>
+                        <li className="text-lg font-normal">
+                            Add a detailed description of the item you have found along with the
+time and place where you have found it.
+                        </li>
+                        <li className="text-lg font-normal">
+                            Add active contact details so that the person who has lost the item can
+contact you!
+                        </li>
+                    </ul>
+                </div>
+                <div className="flex items-center flex-wrap lg:scale-110 md:scale-[175%] md:ml-5 sm:hidden">
+                    <Image src={FoundVector} />
+                </div>
+            </div>
+
+            {/* <div className="flex flex-row m-28 sm:flex-col sm:m-12 sm:mt-24 gap-x-32">
                 <div className="flex flex-col gap-y-10 max-w-[45vw] sm:max-w-[90vw]">
                     <div className="flex flex-col gap-y-3 sm:text-center">
                         <p className="font-semibold text-4xl">
@@ -107,8 +150,8 @@ export default function Instructions() {
                 <div className="flex items-center flex-wrap sm:hidden">
                     <Image src={FoundVector} alt="" />
                 </div>
-            </div>
+            </div> */}
             <Footer />
-        </>
+        </div>
     );
 }

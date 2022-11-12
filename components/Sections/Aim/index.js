@@ -10,7 +10,7 @@ export default function Aim() {
 				</div>
 			</div>
 			<div className="flex justify-between">
-				<div className="w-[45%] ml-24 mt-4">
+				<div className="w-[45%] lg:w-[70%] md:w-full lg:ml-8 ml-24 mr-8 mt-4">
 					<ul className="px-4" style={{ listStyleType: "disc" }}>
 						<li className="text-lg font-normal text-[#6d7392]">
 							Lost something? Found something? you can post the details of the
@@ -32,7 +32,7 @@ export default function Aim() {
 						</li>
 					</ul>
 				</div>
-				<div className="flex items-center mr-16 ">
+				<div className="flex items-center mr-16 md:hidden">
 					<Image src={img1} />
 				</div>
 			</div>
