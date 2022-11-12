@@ -6,7 +6,7 @@ import img2 from "../../../assets/illustrations/homepage2.png";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import Dropdown from "./../../../components/interfaces/Dropdown/Dropdown";
 import Footer from "../../../components/interfaces/Footer/index";
-import Navbar from "../../../components/interfaces/Navbar";
+import Navbar2 from "../../../components/interfaces/Navbar2";
 import SEO from "../../../components/utils/SEO";
 import { DatePicker } from "antd";
 import { DatePickRef } from "antd/lib/date-picker/generatePicker/interface";
@@ -76,7 +76,7 @@ export default function lost_form() {
     return (
         <>
             <SEO title="Lost / Lost&Found" />
-            <Navbar />
+            <Navbar2 />
             <div className="h-screen flex">
                 <div className="flex flex-col w-screen justify-center items-center self-center my-auto">
                     <h1 className="font-semibold text-5xl mb-10 text-[#304AC1]">

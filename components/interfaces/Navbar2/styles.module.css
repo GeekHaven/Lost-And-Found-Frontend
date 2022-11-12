@@ -1,0 +1,36 @@
+.hoverUnderline {
+    display: inline-block;
+    position: relative;
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    color: #666666;
+}
+.hoverUnderline:hover {
+    color: #304ac1;
+}
+.hoverUnderline:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #304ac1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hoverUnderline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.logout {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    color: #666666;
+}
