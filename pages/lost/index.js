@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Footer from "../../components/interfaces/Footer";
 import Category from "../../components/Sections/Category";
-import Navbar from "../../components/interfaces//Navbar";
+import Navbar2 from "../../components/interfaces//Navbar2";
 import List from "../../components/Sections/List";
 import LostHeader from "../../components/interfaces/LostHeader/index";
 import SEO from "../../components/utils/SEO";
@@ -118,7 +118,7 @@ export default function Lost() {
     return (
         <>
             <SEO title="Lost / Lost&Found" />
-            <Navbar />
+            <Navbar2 />
             <div className="">
                 <LostHeader setQuery={setQuery} />
                 <Category

@@ -2,7 +2,7 @@ import { useRef, useState, useCallback, useEffect } from "react";
 import Footer from "../../components/interfaces/Footer";
 import Category from "../../components/Sections/Category";
 import FoundHeader from "../../components/interfaces/FoundHeader";
-import Navbar from "../../components/interfaces//Navbar";
+import Navbar2 from "../../components/interfaces//Navbar2";
 import List from "../../components/Sections/List";
 import SEO from "../../components/utils/SEO";
 import { get } from "../../components/utils/API/index";
@@ -117,7 +117,7 @@ export default function Found() {
     return (
         <>
             <SEO title="Found / Lost&Found" />
-            <Navbar />
+            <Navbar2 />
             <div>
                 <FoundHeader setQuery={setQuery} />
                 <Category

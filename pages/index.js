@@ -16,7 +16,7 @@ export default function Home() {
     // push to home if logged in
     useEffect(() => {
         if (!isLoggedIn) {
-            router.push("/home");
+            router.push("/lost");
         }
     });
     return (
