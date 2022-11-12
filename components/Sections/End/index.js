@@ -1,8 +1,14 @@
 import { useRouter } from "next/router";
+import { getLS } from "../../utils/LocalStorage";
+
 export default function End() {
     const router = useRouter();
     function handleLogin() {
-        router.push("/signin");
+        if (getLS("jwt_token")) {
+            router.push("/home");
+        } else {
+            router.push("/signin");
+        }
     }
     return (
         <div className="flex flex-col items-center justify-center mt-32">

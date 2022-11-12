@@ -1,19 +1,19 @@
 import axios from "axios";
 import { getLS, removeLS } from "../LocalStorage/index";
 
-const API_URL = "http://172.19.14.101:7000";
+const API_URL = "http://localhost:7000";
 
-const getAccessToken = async () => {
-    return await getLS("jwt_token");
+const getAccessToken = () => {
+    return getLS("jwt_token");
 };
 
-const getHeaders = async (token) => {
-    if (!token) token = await getAccessToken();
+const getHeaders = (token) => {
+    if (!token) token = getAccessToken();
     if (token) {
         return {
             headers: {
                 Accept: "application/json",
-                Authorization: `${token}`,
+                Authorization: token,
             },
         };
     }
@@ -24,13 +24,14 @@ const getHeaders = async (token) => {
     };
 };
 
-const post = async (endpoint, body, token = null) => {
+const post = async (endpoint, body, token = null, form = false) => {
+    let options = getHeaders(token);
+    if (form) {
+        options.headers["Content-Type"] = "multipart/form-data";
+    }
     try {
-        const response = await axios.post(
-            API_URL + endpoint,
-            body,
-            getHeaders(token)
-        );
+        console.log(options);
+        const response = await axios.post(API_URL + endpoint, body, options);
         return response;
     } catch (err) {
         console.error(err?.response?.data || err);
