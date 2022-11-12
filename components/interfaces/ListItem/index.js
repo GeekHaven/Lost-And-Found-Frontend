@@ -34,7 +34,7 @@ export default function ListItem({ item, fref }) {
                 <div className="font-normal text-lg text-[#0f1e57] w-48 text-center">
                     {item.title}
                 </div>
-                <div className="font-normal text-lg text-[#0f1e57] w-[35vw] text-center">
+                <div className="font-normal text-lg text-[#0f1e57] w-[35vw] text-center sm:hidden">
                     {item.description}
                 </div>
                 <div className="font-semibold text-lg text-[#0f1e57] w-32 text-center">

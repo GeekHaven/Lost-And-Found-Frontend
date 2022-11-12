@@ -20,6 +20,7 @@ export default function CategoryCard({ data, setSelectedCategory }) {
             <div>
                 <Image
                     src={data.img || CategoryCardPlaceholder}
+                    className="w-52 h-36"
                     width="200px"
                     height="148px"
                 />

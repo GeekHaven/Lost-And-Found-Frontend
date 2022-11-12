@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 export default function List({ data, fref, sortBy, setSortBy }) {
     const router = useRouter();
     return (
-        <div className="mt-20 px-36  mb-12 flex flex-col gap-10">
+        <div className="mt-20 px-36 md:px-12 mb-12 flex flex-col gap-10">
             <div className="flex flex-row justify-between items-center">
                 <div className="text-4xl font-semibold text-[#575c75] ">
                     Complete List
@@ -43,7 +43,7 @@ export default function List({ data, fref, sortBy, setSortBy }) {
                     <div className="font-medium text-xl w-48 text-center">
                         Name
                     </div>
-                    <div className="font-medium text-xl w-[35vw] text-center">
+                    <div className="font-medium text-xl w-[35vw] text-center sm:hidden">
                         Description
                     </div>
                     <div className="font-medium text-xl w-32 text-center">
