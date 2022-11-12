@@ -7,7 +7,7 @@ export default function End() {
     return (
         <div className="flex flex-col items-center justify-center mt-32">
             <div
-                className="text-5xl font-semibold text-[#091553] text-center leading-tight"
+                className="text-5xl font-semibold text-[#091553] text-center leading-tight mt-32"
                 style={{ letterSpacing: "1px" }}
             >
                 Ready to meet up with <br /> your long lost things?
