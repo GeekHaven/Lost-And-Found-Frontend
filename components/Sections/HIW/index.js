@@ -14,8 +14,8 @@ export default function HIW() {
 						In 3 Easy Steps
 					</div>
 				</div>
-				<div className="flex flex-row gap-x-28 md:flex-col md:gap-y-8 ">
-					<div className="flex flex-col gap-y-6 items-center md:h-96">
+				<div className="flex flex-row md:flex-col md:gap-y-8 ">
+					<div className="flex flex-col ml-6 mr-6 lg:mr-2 lg:ml-0 gap-y-6 items-center md:h-96">
 						<Image src={img1} />
 
 						{/* <div className="font-normal text-lg text-center ml-10">
@@ -23,14 +23,14 @@ export default function HIW() {
                         you have lost !
                     </div> */}
 					</div>
-					<div className="flex flex-col gap-y-6 items-center md:h-96">
+					<div className="flex flex-col ml-6 mr-6 lg:ml-2 lg:mr-2 gap-y-6 items-center md:h-96">
 						<Image src={img2} />
 						{/* <div className="font-normal text-lg text-center ml-10 ">
                         If found Something, upload the details of the item that
                         you have just found !
                     </div> */}
 					</div>
-					<div className="flex flex-col gap-y-6 items-center md:h-96">
+					<div className="flex flex-col ml-6 mr-6 lg:ml-2 lg:mr-0 gap-y-6 items-center md:h-96">
 						<Image src={img3} />
 						{/* <div className="font-normal text-lg text-center ml-10">
                         If you see your lost item in the found list or

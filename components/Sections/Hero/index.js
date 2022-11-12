@@ -25,27 +25,23 @@ export default function Hero() {
 								Get Started
 							</button>
 						</div>
-						
-						<div className="2xl:hidden md:flex">
-						<Image src={img1} alt="" />
+
+						<div className="hidden md:flex">
+							<Image src={img1} alt=""/>
 						</div>
 
-						<div className="w-full md:flex 2xl:hidden lg:hidden sm:scale-75 mt-20 md:justify-center">
-							<button	
+						<div className="w-full md:flex hidden sm:scale-75 mt-20 md:justify-center">
+							<button
 								className="px-20 lg:-mt-8 py-3.5 bg-[#304ac1] text-[#ffffff] font-semibold text-2xl hover:bg-[#435cd0] rounded-lg"
 								onClick={handleLogin}
 							>
 								Get Started
 							</button>
 						</div>
-
 					</div>
 					<div className="ml-24 lg:ml-4 md:hidden">
 						<Image src={img1} alt="" />
 					</div>
-					
-
-					
 				</div>
 			</div>
 		);
