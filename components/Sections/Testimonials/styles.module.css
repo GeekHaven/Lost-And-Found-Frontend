@@ -5,189 +5,236 @@
 	left: 8%;
 }
 
-@media only screen and (min-device-width: 1400px) and (max-device-width: 1447px){
-
-   .container {
-	   left: 6%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-
-@media only screen and (min-device-width: 1350px) and (max-device-width: 1400px){
-
-   .container {
-	   left: 8%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-   
-@media only screen and (min-device-width: 1300px) and (max-device-width: 1350px){
-
-   .container {
-	   left: 9%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-
-@media only screen and (min-device-width: 1100px) and (max-device-width: 1280px){
-
-   .container {
-	   left: 8%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 80%;
-   }
-
-   }
-
-   @media only screen and (min-device-width: 1050px) and (max-device-width: 1100px){
-
-   .container {
-	   left: 10%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-
-   @media only screen and (min-device-width: 1000px) and (max-device-width: 1050px){
-
-   .container {
-	   left: 12%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-
-   @media only screen and (min-device-width: 900px) and (max-device-width: 1000px){
-
-   .container {
-	   left: 14%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-
-   @media only screen and (min-device-width: 800px) and (max-device-width: 1000px){
-
-   .container {
-	   left: 15%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-
-   @media only screen and (min-device-width: 700px) and (max-device-width: 800px){
-
-   .container {
-	   left: 24%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 60%;
-   }
-
-   }
-
-   @media only screen and (min-device-width: 600px) and (max-device-width: 700px){
-
-   .container {
-	   left: 25%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 70%;
-   }
-
-   }
-   @media only screen and (min-device-width: 550px) and (max-device-width: 600px){
-
-   .container {
-	   left: 20%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 120%;
-	   transform: scale(0.9);
-   }
-
-   }
-
-   @media only screen and (min-device-width: 500px) and (max-device-width: 550px){
-
-   .container {
-	   left: 24%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 120%;
-	   transform: scale(0.85);
-   }
-
-   }
-
-   @media only screen and (min-device-width: 450px) and (max-device-width: 500px){
-
-   .container {
-	   left: 26%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 120%;
-	   transform: scale(0.8);
-   }
-
-   }
-   @media only screen and (min-device-width: 400px) and (max-device-width: 450px){
-
-   .container {
-	   left: 29%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 120%;
-	   transform: scale(0.75);
-   }
-
-   }
-   @media only screen and (min-device-width: 363px) and (max-device-width: 400px){
+@media only screen and (min-device-width: 1450px) and (max-device-width: 1500px) {
 
 	.container {
-		left: 31.5%;
+		left: 11%;
 		position: relative;
-	 perspective: 3000px;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+
+@media only screen and (min-device-width: 1400px) and (max-device-width: 1449px) {
+
+	.container {
+		left: 6%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-device-width: 1350px) and (max-device-width: 1400px) {
+
+	.container {
+		left: 8%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-device-width: 1300px) and (max-device-width: 1350px) {
+
+	.container {
+		left: 9%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-device-width: 1100px) and (max-device-width: 1280px) {
+
+	.container {
+		left: 8%;
+		position: relative;
+		perspective: 3000px;
+		width: 80%;
+	}
+
+}
+
+@media only screen and (min-device-width: 1050px) and (max-device-width: 1100px) {
+
+	.container {
+		left: 12%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1050px) {
+
+	.container {
+		left: 13%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-device-width: 900px) and (max-device-width: 1000px) {
+
+	.container {
+		left: 15%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+}
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 900px) {
+
+	.container {
+		left: 20%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-device-width: 700px) and (max-device-width: 800px) {
+
+	.container {
+		left: 24%;
+		position: relative;
+		perspective: 3000px;
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 700px) {
+
+	.container {
+		left: 25%;
+		position: relative;
+		perspective: 3000px;
+		width: 70%;
+	}
+
+}
+
+@media only screen and (min-device-width: 550px) and (max-device-width: 600px) {
+
+	.container {
+		left: 20%;
+		position: relative;
+		perspective: 3000px;
+		width: 120%;
+		transform: scale(0.9);
+	}
+
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 550px) {
+
+	.container {
+		left: 24%;
+		position: relative;
+		perspective: 3000px;
+		width: 120%;
+		transform: scale(0.85);
+	}
+
+}
+
+@media only screen and (min-device-width: 450px) and (max-device-width: 500px) {
+
+	.container {
+		left: 26%;
+		position: relative;
+		perspective: 3000px;
+		width: 120%;
+		transform: scale(0.8);
+	}
+
+}
+@media only screen and (min-device-width: 424px) and (max-device-width: 449px) {
+
+	.container {
+		left: 27%;
+		position: relative;
+		perspective: 3000px;
+		width: 120%;
+		transform: scale(0.75);
+	}
+
+}
+@media only screen and (min-device-width: 401px) and (max-device-width: 423px) {
+
+	.container {
+		left: 29%;
+		position: relative;
+		perspective: 3000px;
+		width: 120%;
+		transform: scale(0.75);
+	}
+
+}
+
+@media only screen and (min-device-width: 383px) and (max-device-width: 400px) {
+
+	.container {
+		left: 30%;
+		position: relative;
+		perspective: 3000px;
 		width: 120%;
 		transform: scale(0.7);
 	}
- 
+
+}
+@media only screen and (min-device-width: 369px) and (max-device-width: 382px) {
+
+	.container {
+		left: 32%;
+		position: relative;
+		perspective: 3000px;
+		width: 120%;
+		transform: scale(0.7);
 	}
 
-   @media only screen and (max-device-width: 362px){
+}
 
-   .container {
-	   left: 24%;
-	   position: relative;
-	perspective: 3000px;
-	   width: 150%;
-	   transform: scale(0.7);
-   }
+@media only screen and (min-device-width: 360px) and (max-device-width: 368px) {
 
-   }
+	.container {
+		left: 33.5%;
+		position: relative;
+		perspective: 3000px;
+		width: 120%;
+		transform: scale(0.7);
+	}
+
+}
+@media only screen and (max-device-width: 359px) {
+
+	.container {
+		left: 25%;
+		position: relative;
+		perspective: 3000px;
+		width: 150%;
+		transform: scale(0.7);
+	}
+
+}
 
 
 #carousel {
 	position: relative;
 }
+
 #carousel figure {
 	display: block;
 	animation: rotate 30000ms ease-in-out infinite;
@@ -200,117 +247,134 @@
 #carousel figure:nth-child(0) {
 	animation-delay: -30000ms;
 }
+
 #carousel figure:nth-child(1) {
 	animation-delay: -22500ms;
 }
+
 #carousel figure:nth-child(2) {
 	animation-delay: -15000ms;
 }
+
 #carousel figure:nth-child(3) {
 	animation-delay: -7500ms;
 }
+
 #carousel figure:nth-child(4) {
 	animation-delay: 0ms;
 }
+
 #carousel figure:nth-child(5) {
 	animation-delay: 7500ms;
 }
+
 #carousel figure:nth-child(6) {
 	animation-delay: 15000ms;
 }
+
 @keyframes rotate {
-	0%, 20%, 99.7619047619%, 100% {
+
+	0%,
+	20%,
+	99.7619047619%,
+	100% {
 		transform: rotateY(45deg) scale(0.8);
 		right: 0;
 		z-index: -1;
 		-webkit-filter: opacity(100%) blur(2px);
-   }
-	24.7619047619%, 45% {
+	}
+
+	24.7619047619%,
+	45% {
 		transform: rotateY(0deg) scale(1);
 		right: 40%;
-	   
+
 		z-index: 100;
 		-webkit-filter: opacity(100%) blur(0px);
-   }
-	49.7619047619%, 70% {
+	}
+
+	49.7619047619%,
+	70% {
 		transform: rotateY(-45deg) scale(0.8);
 		right: 81%;
-	   
+
 		z-index: -1;
 		-webkit-filter: opacity(100%) blur(2px);
-   }
-	74.7619047619%, 95% {
+	}
+
+	74.7619047619%,
+	95% {
 		transform: rotateY(-90deg) scale(0);
 		right: 0%;
-		
+
 		z-index: 0;
 		-webkit-filter: opacity(0%) blur(0px);
-   }
+	}
 }
 
-.box{
-   width: 100vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.box {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-@media only screen and (max-device-width: 800px){
+@media only screen and (max-device-width: 800px) {
 
 	.box {
 		width: 100vw;
-	display: flex;
-	padding-left: 4rem;
-	justify-content: center;
-	align-items: center;
-	}
- 
+		display: flex;
+		padding-left: 4rem;
+		justify-content: center;
+		align-items: center;
 	}
 
-@media only screen and (max-device-width: 750px){
+}
 
-   .box {
-	   width: 100vw;
-   display: flex;
-   padding-left: 2rem;
-   justify-content: center;
-   align-items: center;
-   }
-
-   }
-
-   @media only screen and (max-device-width: 700px){
-
-   .box {
-	   width: 100vw;
-   display: flex;
-   padding-left: 6rem;
-   justify-content: center;
-   align-items: center;
-   }
-
-   }
-
-   @media only screen and (max-device-width: 597px){
-
-   .box {
-	   width: 100vw;
-   display: flex;
-   padding-left: 0rem;
-   justify-content: center;
-   align-items: center;
-   }
-
-   }
-   @media only screen and (max-device-width: 362px){
+@media only screen and (max-device-width: 750px) {
 
 	.box {
 		width: 100vw;
-	display: flex;
-	margin-left: -10rem;
-	justify-content: center;
-	align-items: center;
+		display: flex;
+		padding-left: 2rem;
+		justify-content: center;
+		align-items: center;
 	}
- 
+
+}
+
+@media only screen and (max-device-width: 700px) {
+
+	.box {
+		width: 100vw;
+		display: flex;
+		padding-left: 6rem;
+		justify-content: center;
+		align-items: center;
 	}
-   
+
+}
+
+@media only screen and (max-device-width: 597px) {
+
+	.box {
+		width: 100vw;
+		display: flex;
+		padding-left: 0rem;
+		justify-content: center;
+		align-items: center;
+	}
+
+}
+
+/* @media only screen and (max-device-width: 362px) {
+
+	.box {
+		width: 100vw;
+		display: flex;
+		margin-left: -10rem;
+		justify-content: center;
+		align-items: center;
+	}
+
+} */
