@@ -50,10 +50,10 @@ export default function Footer() {
 							Follow Us On
 						</h5>
 						<div className="flex justify-between gap-10 sm:justify-center">
-							<Icon src={google}></Icon>
-							<Icon src={twitter}></Icon>
-							<Icon src={facebook}></Icon>
-							<Icon src={insta}></Icon>
+							<Icon src={google} link = "mailto://geekhaven@iiita.ac.in"></Icon>
+							<Icon src={twitter} link="https://twitter.com/geekhaveniiita"></Icon>
+							<Icon src={facebook} link = "https://www.facebook.com/geekhaveniiita"></Icon>
+							<Icon src={insta} link= "https://www.instagram.com/geekhaven_iiita/"></Icon>
 						</div>
 					</div>
 					<div

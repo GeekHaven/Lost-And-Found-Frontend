@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function Icon({ src }) {
+export default function Icon({ src, link }) {
     return (
 			<>
 				<a
-					href="#"
+					href={link}
 					className="w-7 h-7 text-[#ebeffa] hover:opacity-100 cursor-pointer"
 					style={{ opacity: 0.7 }}
 				>
