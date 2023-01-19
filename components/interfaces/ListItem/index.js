@@ -3,6 +3,7 @@ import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlacehold
 import { useRouter } from "next/router";
 import { Tooltip } from "antd";
 import ItemModal from "../ItemModal";
+
 import { useState } from "react";
 export default function ListItem({ item, fref }) {
     const router = useRouter();
@@ -31,6 +32,7 @@ export default function ListItem({ item, fref }) {
                         width={150}
                     />
                 </div>
+                
                 <div className="font-normal text-lg text-[#0f1e57] w-48 text-center">
                     {item.title}
                 </div>

@@ -22,7 +22,7 @@ export default function LostHeader({ setQuery }) {
                 </h1>
                 <div className="flex flex-row gap-14 flex-wrap -mt-24 scale-75 sm:scale-50  sm:justify-center">
                     <Link href="/add/lost">
-                        <button className="py-4 px-16 rounded-xl sm:scale-125  bg-[#304AC1] text-[#ffffff] font-normal text-2xl  sm:text-lg">
+                        <button className="py-4 px-24 rounded-xl sm:scale-125  bg-[#304AC1] text-[#ffffff] font-normal text-2xl  sm:text-lg">
                             <span className="font-[600]">Add lost item</span>
                             
                         </button>

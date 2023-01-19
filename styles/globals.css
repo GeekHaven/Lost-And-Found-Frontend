@@ -73,3 +73,12 @@ a {
         font-size: 12px;
     }
 }
+
+.ant-modal-body, .ant-modal-close-x{
+    background-color: white !important;
+}
+
+
+.ant-modal-close-x{
+    opacity: 0.2;
+}

@@ -28,26 +28,26 @@ export default function Instructions() {
                         className="px-4 text-[#6D7392] ml-4 -mt-4"
                         style={{ listStyleType: "disc" }}
                     >
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Login to the Lost&Found App and click on Found Item.
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Use the search bar to search the Found Items list
                             for the item that you have lost. If it has been
                             found, you can contact the finder and get back your
                             item!
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             If not, go back to the home page and click on Lost
                             Item.
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Add a detailed description of the item that you have
                             lost - for example, the color, shape, size and
                             manufacturer. The more details you can provide, the
                             better!
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Add active contact details so that the person who
                             has found your item can contact you!
                         </li>
@@ -74,22 +74,22 @@ export default function Instructions() {
                         className="px-4 text-[#6D7392] ml-4 -mt-4"
                         style={{ listStyleType: "disc" }}
                     >
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Login to the Lost&Found App and click on Lost Item.
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Use the search bar to search the Lost Items list for the item that you have
 found. If someone has already posted a lost ad for it, you can contact the
 owner and give back the item!
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             If not, go back to the home page and click on Found Item.
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Add a detailed description of the item you have found along with the
 time and place where you have found it.
                         </li>
-                        <li className="text-lg font-normal">
+                        <li className="text-lg font-normal mb-6">
                             Add active contact details so that the person who has lost the item can
 contact you!
                         </li>
