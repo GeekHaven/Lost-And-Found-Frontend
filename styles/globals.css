@@ -82,6 +82,10 @@ a {
 .ant-modal-close-x{
     opacity: 0.2;
 }
+
+.ant-modal-content{
+    border-radius: 10px !important;
+
 .person {
     align-items: center;
     display: flex;

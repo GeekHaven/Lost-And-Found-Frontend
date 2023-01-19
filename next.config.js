@@ -6,7 +6,7 @@ const nextConfig = {
 		domains: [
 			"smf-file-storage.s3.ap-south-1.amazonaws.com",
 			"localhost",
-			"6572-27-57-97-116.in.ngrok.io",
+			"172.19.12.25",
 		],
 	},
 };
