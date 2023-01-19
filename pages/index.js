@@ -14,11 +14,12 @@ export default function Home() {
     const router = useRouter();
 
     // push to home if logged in
-    useEffect(() => {
-        if (isLoggedIn) {
-            router.push("/home");
-        }
-    });
+	useEffect(() => {
+		if (isLoggedIn) {
+			console.log("hey");
+      router.push("/home");
+    }
+  }, [isLoggedIn]);
     return (
 			<>
 				<SEO title="Home / LostNFound" />

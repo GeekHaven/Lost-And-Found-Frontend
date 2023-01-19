@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getLS, removeLS } from "../LocalStorage/index";
 
-const API_URL = "http://localhost:7000";
+const API_URL = "http://localhost:8000";
 
 const getAccessToken = () => {
     return getLS("jwt_token");
