@@ -38,11 +38,11 @@ export default function Navbar() {
 				}}
 			>
 				<Link href="/">
-					<div className=" ml-28 text-[#304AC1] flex flex-row items-center justify-center w-96 cursor-pointer">
+					<div className=" ml-28 text-[#304AC1] flex flex-row items-center justify-center w-96 cursor-pointer w-64">
 						<Image src={logo} />
-						<div className="ml-4 font-[600] text-xl w-64 tracking-tight		">
+						{/* <div className="ml-4 font-[600] text-xl w-64 tracking-tight		">
 							Lost&Found IIITA
-						</div>
+						</div> */}
 					</div>
 				</Link>
 				<div className="ml-[20vw] lg:ml-0 flex flex-row items-center justify-evenly w-[50vw] sm:hidden">

@@ -14,18 +14,21 @@ export default function Footer() {
 					style={{ fontFamily: ["Open Sans Condensed", "sans-serif"] }}
 				>
 					<div className="flex gap-4 sm:justify-center">
-						<div className="w-9 h-9">
+						{/* <div className="w-9 h-9">
 							<Image src={logo} />
-						</div>
+						</div> */}
 						<div>
-							<h3
+							{/* <h3
 								className="text-2xl font-bold tracking-normal text-[#ebeffa]"
 								style={{
 									fontFamily: ["Open Sans Condensed Bold", "sans-serif"],
 								}}
 							>
 								Lost&Found IIITA
-							</h3>
+							</h3> */}
+							<div className="w-44">
+								<Image src={logo} />
+							</div>
 							<p
 								className="text-lg font-light tracking-normal leading-6 mt-2"
 								style={{

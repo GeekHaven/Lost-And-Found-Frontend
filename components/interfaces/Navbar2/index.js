@@ -37,11 +37,11 @@ export default function Navbar2() {
 				}}
 			>
 				<Link href="/">
-					<div className=" ml-20 text-[#304AC1] flex flex-row items-center justify-center w-96 cursor-pointer">
-						<Image src={logo} />
-						<div className="ml-4 font-[600] text-xl w-64 tracking-tight		">
+					<div className=" ml-20 text-[#304AC1] flex flex-row items-center justify-center w-96 cursor-pointer w-64">
+						<Image src={logo} className="w-64" />
+						{/* <div className="ml-4 font-[600] text-xl w-64 tracking-tight		">
 							Lost&Found IIITA
-						</div>
+						</div> */}
 					</div>
 				</Link>
 				<div className="ml-[20vw] lg:ml-0 flex flex-row items-center justify-evenly w-[50vw] sm:hidden">
@@ -49,7 +49,9 @@ export default function Navbar2() {
 						navLinks.map((navLink, i) => (
 							<div className={styles.hoverUnderline} key={i}>
 								<Link href={navLink.href}>
-									<span className="cursor-pointer text-base">{navLink.title}</span>
+									<span className="cursor-pointer text-base">
+										{navLink.title}
+									</span>
 								</Link>
 							</div>
 						))}
