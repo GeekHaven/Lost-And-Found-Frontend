@@ -17,7 +17,7 @@ export default function Footer() {
 						{/* <div className="w-9 h-9">
 							<Image src={logo} />
 						</div> */}
-						<div>
+						<div className="">
 							{/* <h3
 								className="text-2xl font-bold tracking-normal text-[#ebeffa]"
 								style={{
@@ -26,14 +26,14 @@ export default function Footer() {
 							>
 								Lost&Found IIITA
 							</h3> */}
-							<div className="w-44">
+							<div className="w-44 relative left-[50%] translate-x-[-50%]">
 								<Image src={logo} />
 							</div>
 							<p
-								className="text-lg font-light tracking-normal leading-6 mt-2"
+								className="text-lg font-light tracking-normal leading-6 mt-2 sm:w-full"
 								style={{
 									fontFamily: ["Open Sans Condensed Light", "sans-serif"],
-									width: "10em",
+									
 								}}
 							>
 								World's Greatest Collection of Lost Items
@@ -42,14 +42,14 @@ export default function Footer() {
 					</div>
 					<div className="flex flex-col">
 						<h5
-							className="text-xl mb-4 font-bold tracking-normal sm:text-center sm:mt-8 sm:mb-4 text-[#ebeffa]"
+							className="text-2xl mb-4 font-bold tracking-normal sm:text-center sm:mt-2 sm:mb-4 text-[#ebeffa]"
 							style={{
 								fontFamily: ["Open Sans Condensed Bold", "sans-serif"],
 							}}
 						>
 							Follow Us On
 						</h5>
-						<div className="flex justify-between gap-10 sm:justify-center">
+						<div className="flex justify-between gap-10 sm:gap-16 sm:justify-center">
 							<Icon src={google} link = "mailto://geekhaven@iiita.ac.in"></Icon>
 							<Icon src={twitter} link="https://twitter.com/geekhaveniiita"></Icon>
 							<Icon src={facebook} link = "https://www.facebook.com/geekhaveniiita"></Icon>
