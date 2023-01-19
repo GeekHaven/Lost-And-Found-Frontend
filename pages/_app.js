@@ -26,15 +26,15 @@ function MyApp({ Component, pageProps }) {
 
     // check if user is logged in
     async function checkUsr() {
+        let jwt_token = getAccessToken();
+        if (jwt_token) {
+            setIsLoggedIn(true);
+        }
         if (publicPath.includes(router.asPath)) {
             setShow(true);
             return;
         }
         setShow(false);
-        let jwt_token = getAccessToken();
-        if (jwt_token) {
-            setIsLoggedIn(true);
-        }
         if (!jwt_token) {
             router.push("/");
         }
@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
     useEffect(() => {
         if (!router.isReady) return; //if router is not availble till then return
         checkUsr();
-    }, [isLoggedIn, router.isReady]);
+    }, [isLoggedIn, router]);
 
     return (
         <NextUIProvider>
