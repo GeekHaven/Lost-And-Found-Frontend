@@ -2,13 +2,13 @@ import Image from "next/image";
 import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
 import { useRouter } from "next/router";
 import { Tooltip } from "antd";
-import ItemModal from "../ItemModal";
+import ItemModal from "../LostItemModal";
 
 import { useState } from "react";
 export default function ListItem({ item, fref }) {
     const router = useRouter();
     let date;
-    if (router.asPath === "/lost") {
+    if (router.pathname === "/lost") {
         date = new Date(item.lostDate);
     } else {
         date = new Date(item.foundDate);
