@@ -13,7 +13,7 @@ export default function Category({
             </div>
             {categories && (
                 <div
-                    className=" sm:text-center gap-16 sm:gap-4 justify-center"
+                    className="sm:text-center gap-16 sm:gap-4 justify-center"
                     style={{ display: "flex", flexWrap: "wrap" }}
                 >
                     {categories.map((category, i) => {
