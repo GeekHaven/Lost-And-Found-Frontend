@@ -21,17 +21,17 @@ export default function Home() {
     }
   }, [isLoggedIn]);
     return (
-			<>
-				<SEO title="Home / LostNFound" />
-				<Navbar />
-				<div className="p-24 sm:p-10 pt-0 bg-[#FAFAFA]">
-					<Hero />
-					<HIW />
-					<Aim />
-					<Testimonials />
-					<End />
-				</div>
-				<Footer />
-			</>
-		);
+      <>
+        <SEO title="Home / LostNFound" />
+        <Navbar />
+        <div className="flex flex-col gap-40 py-20 px-20 bg-[#FAFAFA]">
+          <Hero />
+          <HIW />
+          <Aim />
+          <Testimonials />
+          <End />
+        </div>
+        <Footer />
+      </>
+    );
 }
