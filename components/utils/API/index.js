@@ -30,16 +30,15 @@ const post = async (endpoint, body, token = null, form = false) => {
         options.headers["Content-Type"] = "multipart/form-data";
     }
     try {
-        console.log(options);
-        const response = await axios.post(API_URL + endpoint, body, options);
-        return response;
+      const response = await axios.post(API_URL + endpoint, body, options);
+      return response;
     } catch (err) {
-        console.error(err?.response?.data || err);
-        if (err?.response?.status === 401) {
-            console.log("Wrong password");
-            removeLS("jwt_token");
-        }
-        return err?.response?.data || err;
+      console.error(err?.response?.data || err);
+      if (err?.response?.status === 401) {
+        console.log("Wrong password");
+        removeLS("jwt_token");
+      }
+      return err?.response?.data || err;
     }
 };
 
@@ -92,4 +91,4 @@ const remove = async (endpoint, token = null) => {
     }
 };
 
-export { getAccessToken, post, get, put, remove };
+export { getAccessToken, post, get, put, remove, API_URL, getHeaders };

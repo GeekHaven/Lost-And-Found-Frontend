@@ -38,8 +38,7 @@ export default function lost_form() {
     }
 
     const onDateChange = (date, dateString) => {
-        console.log(dateString);
-        setLostDate(dateString);
+      setLostDate(dateString);
     };
 
     async function getCategories() {
@@ -47,46 +46,44 @@ export default function lost_form() {
             let res = await get("/tag/categories");
             setCategories(res.data?.data);
         } catch (e) {
-            console.log(e);
         }
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        let data = new FormData();
-        data.append("title", title.current.value);
-        data.append("contactPhone", phone.current.value);
-        data.append("lostDate", lostDate);
+      e.preventDefault();
+      setLoading(true);
+      let data = new FormData();
+      data.append("title", title.current.value);
+      data.append("contactPhone", phone.current.value);
+      data.append("lostDate", lostDate);
 
-        if (description.current.value !== "")
-            data.append("description", description.current.value);
-        if (location.current.value !== "")
-            data.append("location", location.current.value);
-        if (email.current.value !== "")
-            data["contactEmail"] = email.current.value;
-        if (selectedCategory !== null) {
-            data.append("tagIds", selectedCategory);
-        }
-        if (file !== null) {
-            data.append("image", file);
-        }
-
-        let res = await post("/lost/new", data, null, true);
-        if (res.data?.data) {
-            notification.success({
-                message: "Lost Item Added Successfully",
-                description:
-                    "Your lost item has been successfully listed among lost items. Hope it reaches you soon.",
-            });
-            router.replace("/lost");
-        } else {
-            notification.error({
-                message: "Incorrect Fields",
-                description: "Please enter details in correct format",
-            });
-        }
-        setLoading(false);
+      if (description.current.value !== "")
+        data.append("description", description.current.value);
+      if (location.current.value !== "")
+        data.append("location", location.current.value);
+      if (email.current.value !== "")
+        data.append("contactEmail", email.current.value);
+      if (selectedCategory !== null) {
+        data.append("tagIds", selectedCategory);
+      }
+      if (file !== null) {
+        data.append("image", file);
+      }
+      let res = await post("/lost/new", data, null, true);
+      if (res.data?.data) {
+        notification.success({
+          message: "Lost Item Added Successfully",
+          description:
+            "Your lost item has been successfully listed among lost items. Hope it reaches you soon.",
+        });
+        router.replace("/lost");
+      } else {
+        notification.error({
+          message: "Incorrect Fields",
+          description: "Please enter details in correct format",
+        });
+      }
+      setLoading(false);
     };
 
     useEffect(() => {
@@ -113,13 +110,7 @@ export default function lost_form() {
     useEffect(() => {
         getCategories();
     }, []);
-    const onChange = (value, dateString) => {
-        console.log("Selected Time: ", value);
-        console.log("Formatted Selected Time: ", dateString);
-    };
-    const onOk = (value) => {
-        console.log("onOk: ", value);
-    };
+
 
     return (
       <>

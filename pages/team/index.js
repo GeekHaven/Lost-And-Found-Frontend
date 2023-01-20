@@ -14,7 +14,7 @@ export default function Team() {
         <div className="flex flex-row flex-wrap gap-2 items-center justify-evenly">
           <TeamCard
             img={anurag.src}
-            name={"Anurag Jain"}
+            name={"BuddyLongLegs"}
             role={"Full Stack Developer"}
             link="https://buddylonglegs.live/"
           />

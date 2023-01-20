@@ -31,29 +31,28 @@ export default function Lost() {
         setIsLoading(true);
 
         try {
-            let q = `/lost/latest?pagesize=${size}&pagenumber=${page}&order=${
-                sortBy ? "descending" : "ascending"
-            }`;
-            if (query !== "") {
-                q += `&q=${query}`;
-            }
-            if (selectedCategory !== "") {
-                q += `&tag=${selectedCategory}`;
-            }
-            let res = await get(q);
-            setIsLoading(false);
-            setHasMore(res.data.has_next_page);
-            setLoadPage(false);
-            if (page !== lastLoadedPage) {
-                lastLoadedPage = page;
-                setData((prev) => {
-                    return [...new Set([...prev, ...res.data.data])];
-                });
-            }
+          let q = `/lost/latest?pagesize=${size}&pagenumber=${page}&order=${
+            sortBy ? "descending" : "ascending"
+          }`;
+          if (query !== "") {
+            q += `&q=${query}`;
+          }
+          if (selectedCategory !== "") {
+            q += `&tag=${selectedCategory}`;
+          }
+          let res = await get(q);
+          setIsLoading(false);
+          setHasMore(res.data.has_next_page);
+          setLoadPage(false);
+          if (page !== lastLoadedPage) {
+            lastLoadedPage = page;
+            setData((prev) => {
+              return [...new Set([...prev, ...res.data.data])];
+            });
+          }
         } catch (e) {
-            console.log(e);
-            setIsLoading(false);
-            setData([]);
+          setIsLoading(false);
+          setData([]);
         }
     };
 
@@ -77,11 +76,9 @@ export default function Lost() {
     //get the categories of lost items
     async function getCategories() {
         try {
-            let res = await get("/tag/categories");
-            setCategories(res.data?.data);
-        } catch (e) {
-            console.log(e);
-        }
+          let res = await get("/tag/categories");
+          setCategories(res.data?.data);
+        } catch (e) {}
     }
 
     //use Effects

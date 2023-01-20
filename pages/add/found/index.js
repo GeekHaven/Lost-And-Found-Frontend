@@ -38,89 +38,79 @@ export default function found_form() {
     }
 
     const onDateChange = (date, dateString) => {
-        console.log(dateString);
-        setFoundDate(dateString);
+      setFoundDate(dateString);
     };
 
     async function getCategories() {
-        try {
-            let res = await get("/tag/categories");
-            setCategories(res.data?.data);
-        } catch (e) {
-            console.log(e);
-        }
+      try {
+        let res = await get("/tag/categories");
+        setCategories(res.data?.data);
+      } catch (e) {}
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        let data = new FormData();
-        data.append("title", title.current.value);
-        data.append("contactPhone", phone.current.value);
-        data.append("FoundDate", foundDate);
+      e.preventDefault();
+      setLoading(true);
+      let data = new FormData();
+      data.append("title", title.current.value);
+      data.append("contactPhone", phone.current.value);
+      data.append("FoundDate", foundDate);
 
-        if (description.current.value !== "")
-            data.append("description", description.current.value);
-        if (location.current.value !== "")
-            data.append("location", location.current.value);
-        if (email.current.value !== "")
-            data["contactEmail"] = email.current.value;
-        if (selectedCategory !== null) {
-            data.append("tagIds", selectedCategory);
-        }
-        if (file !== null) {
-            data.append("image", file);
-        }
+      if (description.current.value !== "")
+        data.append("description", description.current.value);
+      if (location.current.value !== "")
+        data.append("location", location.current.value);
+      if (email.current.value !== "")
+        data.append("contactEmail", email.current.value);
+      if (selectedCategory !== null) {
+        data.append("tagIds", selectedCategory);
+      }
+      if (file !== null) {
+        data.append("image", file);
+      }
 
-        let res = await post("/found/new", data, null, true);
-        if (res.data?.data) {
-            notification.success({
-                message: "Found Item Added Successfully",
-                description:
-                    "Your found item has been successfully listed among found items. Hope it finds the owner soon.",
-            });
-            router.replace("/found");
-        } else {
-            notification.error({
-                message: "Incorrect Fields",
-                description: "Please enter details in correct format",
-            });
-        }
-        setLoading(false);
+      let res = await post("/found/new", data, null, true);
+      if (res.data?.data) {
+        notification.success({
+          message: "Found Item Added Successfully",
+          description:
+            "Your found item has been successfully listed among found items. Hope it finds the owner soon.",
+        });
+        router.replace("/found");
+      } else {
+        notification.error({
+          message: "Incorrect Fields",
+          description: "Please enter details in correct format",
+        });
+      }
+      setLoading(false);
     };
 
     useEffect(() => {
-        let fileReader,
-            isCancel = false;
-        if (file) {
-            fileReader = new FileReader();
-            fileReader.onload = (e) => {
-                const { result } = e.target;
-                if (result && !isCancel) {
-                    setFileDataURL(result);
-                }
-            };
-            fileReader.readAsDataURL(file);
-        }
-        return () => {
-            isCancel = true;
-            if (fileReader && fileReader.readyState === 1) {
-                fileReader.abort();
-            }
+      let fileReader,
+        isCancel = false;
+      if (file) {
+        fileReader = new FileReader();
+        fileReader.onload = (e) => {
+          const { result } = e.target;
+          if (result && !isCancel) {
+            setFileDataURL(result);
+          }
         };
+        fileReader.readAsDataURL(file);
+      }
+      return () => {
+        isCancel = true;
+        if (fileReader && fileReader.readyState === 1) {
+          fileReader.abort();
+        }
+      };
     }, [file]);
 
     useEffect(() => {
-        getCategories();
+      getCategories();
     }, []);
-
-    const onChange = (value, dateString) => {
-        console.log("Selected Time: ", value);
-        console.log("Formatted Selected Time: ", dateString);
-    };
-    const onOk = (value) => {
-        console.log("onOk: ", value);
-    };
+  
     return (
       <>
         <SEO title="Found / Lost&Found" />

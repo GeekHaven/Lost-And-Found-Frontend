@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 import location from "../../../assets/Location.svg";
 import { get, post, remove } from "../../utils/API";
 
-export function LostItemModal({ id, user, router, ...props }) {
+export function FoundItemModal({ id, user, router, ...props }) {
   let modal = Modal.info({
     modalRender: () => (
       <DataModal hideModal={hideModal} id={id} user={user} router={router} />
@@ -30,14 +30,14 @@ export function LostItemModal({ id, user, router, ...props }) {
 function DataModal({ hideModal, id, user, router }) {
   let [data, setData] = useState(null);
   async function getData() {
-    let res = await get("/lost/" + id);
+    let res = await get("/found/" + id);
     setData(res.data?.data);
   }
   useEffect(() => {
     getData();
   }, []);
   async function markFound() {
-    let res = await post("/lost/found", { id: data?.id });
+    let res = await post("/found/userfound", { id: data?.id });
     if (res.data?.status) {
       notification.success({
         message: "Item marked as found",
@@ -48,7 +48,7 @@ function DataModal({ hideModal, id, user, router }) {
     }
   }
   async function deleteItem() {
-    let res = await remove("/lost/" + data.id);
+    let res = await remove("/found/" + data.id);
     if (res.status) {
       notification.info({
         message: "Item deleted",
@@ -78,7 +78,7 @@ function DataModal({ hideModal, id, user, router }) {
                 {data.title}
               </div>
               <div className="tag ml-4 sm:mr-4 bg-[#767778] px-3 py-[2px] rounded text-[#ffffff] scale-90">
-                Lost
+                Found
               </div>
             </div>
 
@@ -96,7 +96,7 @@ function DataModal({ hideModal, id, user, router }) {
             <div className="flex flex-grow flex-col flex-wrap text-xs sm:text-sm text-[#9A9A9A]">
               <div className="flex flex-row">
                 <BiTimeFive className="mr-1 sm:text-lg sm:mb-[0.1rem]" />
-                {moment(data.lostDate).fromNow()}
+                {moment(data.foundDate).fromNow()}
               </div>
               <div className="left">
                 <Image src={data.image} width="280" height="280" />
