@@ -25,7 +25,7 @@ export default function Hero() {
             </div>
             <div className="w-full md:hidden">
               <button
-                className="px-24  lg:scale-75 lg:-mt-8 py-3.5 bg-[#304ac1] text-[#ffffff] font-semibold text-2xl hover:bg-[#435cd0] rounded-lg"
+                className="px-20  lg:scale-75 lg:-mt-8 py-3.5 bg-[#304ac1] text-[#ffffff] font-semibold text-2xl hover:bg-[#435cd0] rounded-lg"
                 onClick={handleLogin}
               >
                 Get Started
