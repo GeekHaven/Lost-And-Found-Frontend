@@ -80,13 +80,7 @@ export default function Navbar2() {
           </Button>
         </div>
       </Modal>
-      <div
-        className="w-full z-[999] h-8 flex flex-row items-center justify-between sm:justify-start gap-x-14 p-10"
-        style={{
-          backgroundColor: "#ffffff",
-        }}
-      >
-        {/* Hamburger Menu */}
+      {/* Hamburger Menu */}
         <Drawer
           // title="Basic Drawer"
           placement={"right"}
@@ -94,6 +88,7 @@ export default function Navbar2() {
           open={openHamburger}
           key={"right"}
           closable={false}
+          
         >
           {/* <h5 className="mt-16 py-4 relative left-[-20px] pl-10 hover:bg-[#02C8AC] hover:text-[#FFFFFF] font-['Poppins'] w-full text-4xl hover:translate-x-5 transition-all text-[#02C8AC]">
               Home
@@ -107,7 +102,7 @@ export default function Navbar2() {
             navLinks.map((navLink, i) => (
               <div className={`${styles.hoverUnderline} block my-4`} key={i}>
                 <Link href={navLink.href}>
-                  <span className={`cursor-pointer text-2xl`}>
+                  <span className={`cursor-pointer text-2xl`} onClick={e=>closeHamburger()}>
                     {navLink.title}
                   </span>
                 </Link>
@@ -124,6 +119,12 @@ export default function Navbar2() {
             )}
           </div>
         </Drawer>
+      <div
+        className="w-full z-[999] h-8 flex flex-row items-center justify-between sm:justify-start gap-x-14 p-10"
+        style={{
+          backgroundColor: "#ffffff",
+        }}
+      >
         <Link href="/">
           <div className=" ml-20 text-[#304AC1] flex flex-row items-center cursor-pointer w-64">
             <Image src={logo} className="w-64" />

@@ -86,3 +86,12 @@ a {
 .ant-modal-content{
     border-radius: 10px !important;
 }
+.ant-drawer-content{
+    width: 100vw !important;
+    position: absolute;
+    right: 0;
+}
+.ant-drawer-mask{
+    position: relative;
+    /* justify-content: end !important; */
+}
