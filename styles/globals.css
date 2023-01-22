@@ -231,17 +231,14 @@ a {
     transform: translateY(20px) scale(1.15);
     transform-origin: 50% bottom;
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 200px;
+        width: 500px;
 }
 
 .container2:hover .img {
     transform: translateY(0) scale(1.2);
 }
 
-.img1 {
-    right: 50px;
-    top: 200px;
-    width: 500px;
-}
 
 .img2 {
     left: -46px;
