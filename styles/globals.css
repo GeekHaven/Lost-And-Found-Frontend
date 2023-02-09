@@ -18,6 +18,9 @@
     font-family: "Poppins", sans-serif;
     src: url("../assets/font/Poppins/Poppins-Regular.ttf");
 }
+body {
+    min-height: 100vh;
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -28,7 +31,9 @@ a {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
+input {
+    width: 100%;
+}
 @media screen and (max-width: 360px) {
     html,
     body {
@@ -74,16 +79,16 @@ a {
     }
 }
 
-.ant-modal-body, .ant-modal-close-x{
+.ant-modal-body,
+.ant-modal-close-x {
     background-color: white !important;
 }
 
-
-.ant-modal-close-x{
+.ant-modal-close-x {
     opacity: 0.2;
 }
 
-.ant-modal-content{
+.ant-modal-content {
     border-radius: 10px !important;
 }
 .person {
@@ -102,22 +107,21 @@ a {
     width: 400px;
 }
 
-
-
 .container2:hover {
     transform: scale(0.54);
 }
 
 .container2-inner {
-    clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
-        );
+    clip-path: path(
+        "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+    );
     position: relative;
     transform-origin: 50%;
     top: -200px;
 }
 
 .circle {
-    background-color: #EBEFFA;
+    background-color: #ebeffa;
     border-radius: 50%;
     cursor: pointer;
     height: 380px;
@@ -159,7 +163,7 @@ a {
 }
 
 .divider {
-    background-color: #304AC1;
+    background-color: #304ac1;
     height: 1px;
     width: 160px;
 }
@@ -173,7 +177,7 @@ a {
 }
 
 .name2:hover {
-    color: #304AC1
+    color: #304ac1;
 }
 
 .title2 {
@@ -199,22 +203,21 @@ a {
     width: 400px;
 }
 
-
-
 .container2:hover {
     transform: scale(0.54);
 }
 
 .container2-inner {
-    clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
-        );
+    clip-path: path(
+        "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+    );
     position: relative;
     transform-origin: 50%;
     top: -200px;
 }
 
 .circle {
-    background-color: #EBEFFA;
+    background-color: #ebeffa;
     border-radius: 50%;
     cursor: pointer;
     height: 380px;
@@ -232,13 +235,12 @@ a {
     transform-origin: 50% bottom;
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 200px;
-        width: 500px;
+    width: 500px;
 }
 
 .container2:hover .img {
     transform: translateY(0) scale(1.2);
 }
-
 
 .img2 {
     left: -46px;
@@ -253,7 +255,7 @@ a {
 }
 
 .divider {
-    background-color: #304AC1;
+    background-color: #304ac1;
     height: 1px;
     width: 160px;
 }
@@ -267,7 +269,7 @@ a {
 }
 
 .name2:hover {
-    color: #304AC1
+    color: #304ac1;
 }
 
 .title2 {
@@ -277,12 +279,12 @@ a {
     font-style: italic;
     margin-top: 4px;
 }
-.ant-drawer-content{
+.ant-drawer-content {
     width: 100vw !important;
     position: absolute;
     right: 0;
 }
-.ant-drawer-mask{
+.ant-drawer-mask {
     position: relative;
     /* justify-content: end !important; */
 }

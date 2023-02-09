@@ -29,7 +29,7 @@ export default function FoundHeader({ setQuery }) {
                   ref={qinput}
                   placeholder="Search found items list..."
                   autoComplete="off"
-                  className=" rounded-l-md h-full w-full  bg-[#304AC1] text-xl text-[#ffffff] placeholder:text-[#ffffff] placeholder:text-2xl placeholder:font-[400] p-6"
+                  className=" rounded-l-xl h-full w-full  bg-[#304AC1] text-xl text-[#ffffff] placeholder:text-[#ffffff] placeholder:font-normal placeholder:text-2xl p-6"
                 />
               </div>
               <button
