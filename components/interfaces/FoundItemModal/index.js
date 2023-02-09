@@ -10,9 +10,9 @@ import {
 import { BiTimeFive } from "react-icons/bi";
 import moment from "moment";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
 import location from "../../../assets/Location.svg";
 import { get, post, remove } from "../../utils/API";
 
@@ -36,6 +36,7 @@ function DataModal({ hideModal, id, user, router }) {
   useEffect(() => {
     getData();
   }, []);
+  console.log(data);
   async function markFound() {
     let res = await post("/found/userfound", { id: data?.id });
     if (res.data?.status) {
@@ -99,7 +100,11 @@ function DataModal({ hideModal, id, user, router }) {
                 {moment(data.foundDate).fromNow()}
               </div>
               <div className="left">
-                <Image src={data.image} width="280" height="280" />
+                <Image
+                  src={data.image || ListItemPlaceholder}
+                  width="280"
+                  height="280"
+                />
               </div>
             </div>
             <div className="flex flex-col flex-grow sm:flex-col justify-between">

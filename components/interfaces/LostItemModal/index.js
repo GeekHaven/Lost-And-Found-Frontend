@@ -10,9 +10,9 @@ import {
 import { BiTimeFive } from "react-icons/bi";
 import moment from "moment";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
 import location from "../../../assets/Location.svg";
 import { get, post, remove } from "../../utils/API";
 
@@ -26,7 +26,6 @@ export function LostItemModal({ id, user, router, ...props }) {
     modal.destroy();
   };
 }
-
 function DataModal({ hideModal, id, user, router }) {
   let [data, setData] = useState(null);
   async function getData() {
@@ -99,7 +98,11 @@ function DataModal({ hideModal, id, user, router }) {
                 {moment(data.lostDate).fromNow()}
               </div>
               <div className="left">
-                <Image src={data.image} width="280" height="280" />
+                <Image
+                  src={data.image || ListItemPlaceholder}
+                  width="280"
+                  height="280"
+                />
               </div>
             </div>
             <div className="flex flex-col flex-grow sm:flex-col justify-between">

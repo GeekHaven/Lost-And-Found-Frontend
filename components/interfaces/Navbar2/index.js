@@ -81,44 +81,47 @@ export default function Navbar2() {
         </div>
       </Modal>
       {/* Hamburger Menu */}
-        <Drawer
-          // title="Basic Drawer"
-          placement={"right"}
-          onClose={closeHamburger}
-          open={openHamburger}
-          key={"right"}
-          closable={false}
-          
-        >
-          {/* <h5 className="mt-16 py-4 relative left-[-20px] pl-10 hover:bg-[#02C8AC] hover:text-[#FFFFFF] font-['Poppins'] w-full text-4xl hover:translate-x-5 transition-all text-[#02C8AC]">
+      <Drawer
+        // title="Basic Drawer"
+        placement={"right"}
+        onClose={closeHamburger}
+        open={openHamburger}
+        key={"left"}
+        closable={false}
+      >
+        {/* <h5 className="mt-16 py-4 relative left-[-20px] pl-10 hover:bg-[#02C8AC] hover:text-[#FFFFFF] font-['Poppins'] w-full text-4xl hover:translate-x-5 transition-all text-[#02C8AC]">
               Home
             </h5> */}
-          <GrClose
-            className="font-bold h-6 w-6 absolute right-6 top-6"
-            onClick={closeHamburger}
-          />
+        <GrClose
+          className="font-bold h-6 w-6 absolute right-6 top-6"
+          onClick={closeHamburger}
+        />
 
-          {!(router.route === "/" || router.route === "") &&
-            navLinks.map((navLink, i) => (
-              <div className={`${styles.hoverUnderline} block my-4`} key={i}>
-                <Link href={navLink.href}>
-                  <span className={`cursor-pointer text-2xl`} onClick={e=>closeHamburger()}>
-                    {navLink.title}
-                  </span>
-                </Link>
-              </div>
-            ))}
-          <div>
-            {isLoggedIn && (
+        {!(router.route === "/" || router.route === "") &&
+          navLinks.map((navLink, i) => (
+            <Link href={navLink.href}>
               <div
-                onClick={(e) => handleLogout()}
-                className={`${styles.logout} ${styles.hoverUnderline} block text-2xl`}
+                className={`${styles.hoverUnderline} block my-4`}
+                key={i}
+                onClick={(e) => closeHamburger()}
               >
-                Logout
+                <span className={`cursor-pointer text-2xl`}>
+                  {navLink.title}
+                </span>
               </div>
-            )}
-          </div>
-        </Drawer>
+            </Link>
+          ))}
+        <div>
+          {isLoggedIn && (
+            <div
+              onClick={(e) => handleLogout()}
+              className={`${styles.logout} ${styles.hoverUnderline} block text-2xl`}
+            >
+              Logout
+            </div>
+          )}
+        </div>
+      </Drawer>
       <div
         className="w-full z-[999] h-8 flex flex-row items-center justify-between sm:justify-start gap-x-14 p-10"
         style={{
