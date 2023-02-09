@@ -14,23 +14,23 @@ export default function Home() {
     const router = useRouter();
 
     // push to home if logged in
-	useEffect(() => {
-		if (isLoggedIn) {
-      router.push("/home");
-    }
-  }, [isLoggedIn]);
+    useEffect(() => {
+        if (isLoggedIn) {
+            router.push("/home");
+        }
+    }, [isLoggedIn]);
     return (
-      <>
-        <SEO title="Home / LostNFound" />
-        <Navbar />
-        <div className="flex flex-col gap-40 py-20 px-20 bg-[#FAFAFA]">
-          <Hero />
-          <HIW />
-          <Aim />
-          <Testimonials />
-          <End />
-        </div>
-        <Footer />
-      </>
+        <>
+            <SEO title="Home / LostNFound" />
+            <Navbar />
+            <div className="flex flex-col gap-40 py-20 px-20 bg-[#FAFAFA]">
+                <Hero />
+                <HIW />
+                <Aim />
+                {/* <Testimonials /> */}
+                <End />
+            </div>
+            <Footer />
+        </>
     );
 }
