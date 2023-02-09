@@ -24,7 +24,7 @@ export default function CategoryCard({ data, setSelectedCategory }) {
       />
       <div className="sm:hidden bg-[#f2f2f2]">
         <div
-          className="text-center py-5 text-xl font-medium text-[#2f3551] "
+          className="text-center py-3 text-xl font-medium text-[#2f3551] "
           style={{
             width: "200px",
             height: "52px",
