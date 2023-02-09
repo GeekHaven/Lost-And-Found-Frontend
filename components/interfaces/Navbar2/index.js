@@ -99,10 +99,9 @@ export default function Navbar2() {
 
         {!(router.route === "/" || router.route === "") &&
           navLinks.map((navLink, i) => (
-            <Link href={navLink.href}>
+            <Link href={navLink.href} key={i}>
               <div
                 className={`${styles.hoverUnderline} block my-4`}
-                key={i}
                 onClick={(e) => closeHamburger()}
               >
                 <span className={`cursor-pointer text-2xl`}>

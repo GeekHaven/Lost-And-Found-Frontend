@@ -36,7 +36,6 @@ function DataModal({ hideModal, id, user, router }) {
   useEffect(() => {
     getData();
   }, []);
-  console.log(data);
   async function markFound() {
     let res = await post("/found/userfound", { id: data?.id });
     if (res.data?.status) {
@@ -118,12 +117,12 @@ function DataModal({ hideModal, id, user, router }) {
                 {data.description}
               </div>
               <div className="contact">
-                <div className="label">Contact Details</div>
+                <div className="label mb-1">Contact Details</div>
                 <div className="ph font-semibold text-[#091553]">
                   {data.contactPhone}
                 </div>
                 {data.contactEmail && (
-                  <div className="email font-semibold text-[#091553] mt-1">
+                  <div className="email font-semibold text-[#091553] ">
                     {data.contactEmail}
                   </div>
                 )}
@@ -149,14 +148,17 @@ function DataModal({ hideModal, id, user, router }) {
           </div>
           {data.tag && (
             <div className="tags sm:mt-5">
-              {data.tag.map((tag, i) => (
-                <Tag
-                  className="border-none text-[#9A9A9A] text-xs sm:text-sm bg-white -mr-1"
-                  key={i}
-                >
-                  #{tag}
-                </Tag>
-              ))}
+              {data &&
+                data.tag &&
+                data.tag.length > 0 &&
+                data.tag.map((tag, i) => (
+                  <Tag
+                    className="border-none text-[#9A9A9A] text-xs sm:text-sm bg-white -mr-1"
+                    key={i}
+                  >
+                    #{tag}
+                  </Tag>
+                ))}
             </div>
           )}
         </div>
