@@ -12,7 +12,7 @@ import { DatePickRef } from "antd/lib/date-picker/generatePicker/interface";
 import { useRouter } from "next/router";
 import { post, get } from "../../../components/utils/API";
 
-const fileTypes = ["JPG", "PNG", "GIF"];
+const fileTypes = ["JPG", "PNG", "GIF","JPEG"];
 
 export default function found_form() {
   const router = useRouter();
