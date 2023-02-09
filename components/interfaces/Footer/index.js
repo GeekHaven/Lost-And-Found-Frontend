@@ -89,6 +89,9 @@ export default function Footer() {
                                 "sans-serif",
                             ],
                         }}
+                        onClick={() => {
+                            router.push("/team");
+                        }}
                     >
                         &#183; Team Geekhaven
                     </strong>
