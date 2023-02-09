@@ -54,7 +54,7 @@ export default function found_form() {
     let data = new FormData();
     data.append("title", title.current.value);
     data.append("contactPhone", phone.current.value);
-    data.append("FoundDate", foundDate);
+    data.append("foundDate", foundDate);
 
     if (description.current.value !== "")
       data.append("description", description.current.value);
