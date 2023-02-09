@@ -29,7 +29,7 @@ export default function FoundHeader({ setQuery }) {
                   ref={qinput}
                   placeholder="Search found items list..."
                   autoComplete="off"
-                  className=" rounded-l-md h-full w-full  bg-[#304AC1] text-xl text-[#ffffff] placeholder:text-[#ffffff] placeholder:font-normal placeholder:text-2xl p-6"
+                  className=" rounded-l-md h-full w-full  bg-[#304AC1] text-xl text-[#ffffff] placeholder:text-[#ffffff] placeholder:text-2xl placeholder:font-[400] p-6"
                 />
               </div>
               <button
@@ -38,14 +38,14 @@ export default function FoundHeader({ setQuery }) {
               >
                 <Image
                   src={search}
-                  width={60}
-                  height={60}
+                  width={65}
+                  height={65}
                   className="scale-50"
                 />
               </button>
             </form>
             <Link href="/add/found">
-              <button className="py-4 px-16 rounded-xl sm:scale-125 border-solid border-4 border-[#304ac1] font-normal text-2xl text-[#304AC1] sm:text-lg">
+              <button className="py-4 px-16 rounded-xl sm:scale-150 sm:w-8/12 border-solid border-2 border-[#304ac1] font-normal text-2xl text-[#304AC1] sm:text-lg">
                 <span className="font-[600]">Add found item</span>
               </button>
             </Link>

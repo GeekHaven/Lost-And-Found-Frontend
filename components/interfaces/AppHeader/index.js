@@ -13,7 +13,7 @@ export default function AppHeader() {
                     <Link href="/lost">
                         <a>
                             <button
-                                className="py-3.5 w-56 sm:w-72 rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
+                                className="py-3.5 w-72 sm:w-72 rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
                                 style={{
                                     boxShadow: "0px 8px 20px -10px #10237b",
                                 }}
@@ -25,7 +25,7 @@ export default function AppHeader() {
                     <Link href="/found">
                         <a>
                             <button
-                                className="py-3.5 w-56 sm:w-72  rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
+                                className="py-3.5 w-72 sm:w-72  rounded-lg   bg-[#304AC1] text-[#ffffff] font-semibold text-2xl  sm:text-lg hover:bg-[#435cd0] "
                                 style={{
                                     boxShadow: "0px 8px 20px -10px #10237b",
                                 }}

@@ -22,7 +22,7 @@ export default function LostHeader({ setQuery }) {
                 </h1>
                 <div className="flex flex-row gap-14 flex-wrap -mt-24 scale-75 sm:scale-50  sm:justify-center">
                     <Link href="/add/lost">
-                        <button className="py-4 px-24 rounded-xl sm:scale-125  bg-[#304AC1] text-[#ffffff] font-normal text-2xl  sm:text-lg">
+                        <button className="py-4 px-24 rounded-xl sm:scale-150 sm:w-8/12 bg-[#304AC1] text-[#ffffff] font-normal text-2xl  sm:text-lg">
                             <span className="font-[600]">Add lost item</span>
                             
                         </button>
@@ -39,7 +39,7 @@ export default function LostHeader({ setQuery }) {
                                 ref={qinput}
                                 placeholder="Search lost items list..."
                                 autoComplete="off"
-                                className=" rounded-l-md h-full w-full  text-xl text-[#abadba] placeholder:text-[#abadba] placeholder:font-normal placeholder:text-xl p-6"
+                                className=" rounded-l-md h-full w-full  text-xl text-[#abadba] placeholder:text-[#abadba] placeholder:font-normal placeholder:text-2xl p-6"
                             />
                         </div>
                         <button
@@ -48,8 +48,8 @@ export default function LostHeader({ setQuery }) {
                         >
                             <Image
                                 src={search}
-                                width={40}
-                                height={40}
+                                width={65}
+                                height={65}
                                 className="scale-50"
                             />
                         </button>

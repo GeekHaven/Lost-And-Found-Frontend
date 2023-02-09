@@ -20,7 +20,7 @@ export default function End() {
         </div>
         <div className="mt-[3rem]">
           <button
-            className="sm:scale-[80%] px-20  py-3.5 bg-[#304ac1] text-[#ffffff] font-semibold text-2xl hover:bg-[#435cd0] rounded-lg mb-12"
+            className="sm:scale-[80%] px-20  py-3.5 bg-[#304ac1] text-[#ffffff] font-medium text-xl hover:bg-[#435cd0] rounded-lg mb-12"
             onClick={handleLogin}
           >
             Get Started
