@@ -7,7 +7,7 @@ import moment from "moment";
 import UserContext from "../../utils/Contexts/userContext";
 import location from "../../../assets/Location.svg";
 import side from "../../../assets/side.svg";
-import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
+import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.svg";
 import { LostItemModal } from "../LostItemModal";
 import { FoundItemModal } from "../FoundItemModal";
 

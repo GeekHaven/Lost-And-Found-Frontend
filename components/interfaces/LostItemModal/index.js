@@ -12,7 +12,7 @@ import moment from "moment";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.png";
+import ListItemPlaceholder from "../../../assets/illustrations/ListItemPlaceholder.svg";
 import location from "../../../assets/Location.svg";
 import { get, post, remove } from "../../utils/API";
 
@@ -148,8 +148,7 @@ function DataModal({ hideModal, id, user, router }) {
           {data.tag && (
             <div className="tags sm:mt-5">
               {data &&
-                data.tag &&
-                data.tag.length > 0 &&
+                data.tag[0] &&
                 data.tag.map((tag, i) => (
                   <Tag
                     className="border-none text-[#9A9A9A] text-xs sm:text-sm bg-white -mr-1"
