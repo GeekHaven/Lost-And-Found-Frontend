@@ -8,11 +8,10 @@ import Navbar2 from "../../../components/interfaces/Navbar2";
 import SEO from "../../../components/utils/SEO";
 import Footer from "../../../components/interfaces/Footer/index";
 import { DatePicker, notification } from "antd";
-import { DatePickRef } from "antd/lib/date-picker/generatePicker/interface";
 import { useRouter } from "next/router";
 import { post, get } from "../../../components/utils/API";
 
-const fileTypes = ["JPG", "PNG", "GIF","JPEG"];
+const fileTypes = ["JPG", "PNG", "GIF", "JPEG"];
 
 export default function found_form() {
   const router = useRouter();
@@ -44,7 +43,11 @@ export default function found_form() {
   async function getCategories() {
     try {
       let res = await get("/tag/categories");
-      setCategories(res.data?.data);
+      let c = res.data?.data;
+      if (c) {
+        c.push({ id: "null", name: "Other" });
+      }
+      setCategories(c);
     } catch (e) {}
   }
 
@@ -160,7 +163,7 @@ export default function found_form() {
               <form onSubmit={handleSubmit}>
                 {file === null ? (
                   <div
-                    className="text-sm box-border flex items-center justify-center flex-wrap flex-col w-96 border-2 border-solid border-slate-400 rounded-md mb-5 bg-[#EBEFFA] pl-3 pr-3"
+                    className="text-md box-border flex items-center justify-center flex-wrap flex-col w-96 border-2 border-solid border-slate-400 rounded-md mb-5 bg-[#EBEFFA] pl-3 pr-3"
                     style={{ position: "relative" }}
                   >
                     <div>
@@ -190,7 +193,7 @@ export default function found_form() {
                   </div>
                 ) : (
                   <div
-                    className="text-sm box-border flex py-4 pt-6 items-center justify-center flex-wrap flex-col w-96 border-2 border-solid border-slate-400 rounded-md mb-5 bg-[#EBEFFA] pl-3 pr-3"
+                    className="text-md box-border flex py-4 pt-6 items-center justify-center flex-wrap flex-col w-96 border-2 border-solid border-slate-400 rounded-md mb-5 bg-[#EBEFFA] pl-3 pr-3"
                     style={{ position: "relative" }}
                   >
                     <div
@@ -214,7 +217,7 @@ export default function found_form() {
                     </div>
                   </div>
                 )}
-                <div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
+                <div className="text-md box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
                   <input
                     type="text"
                     placeholder="Title"
@@ -223,27 +226,33 @@ export default function found_form() {
                     required={true}
                   />
                 </div>
-                <div className="text-sm box-border py-2 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pr-3">
+                <div className="text-md box-border py-2 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pr-3">
                   <Dropdown
                     options={categories}
-                    setValue={setSelectedCategory}
+                    setValue={(v) => {
+                      if (v === "null") {
+                        setSelectedCategory(null);
+                      } else {
+                        setSelectedCategory(v);
+                        console.log(v);
+                      }
+                    }}
                     fieldNames={{ label: "name", value: "id" }}
                   />
                 </div>
-                <div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
+                <div className="text-md box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA]">
                   <DatePicker
-                    showTime
                     onChange={onDateChange}
                     showToday={true}
-                    placeholder={"Date and Time of Found"}
+                    placeholder={"Date when Found"}
                   />
                 </div>
                 <textarea
-                  className="text-sm box-border pt-3 pr-3 h-36 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3 "
+                  className="text-md box-border pt-3 pr-3 h-36 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3 "
                   placeholder="Description..."
                   ref={description}
                 ></textarea>
-                <div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
+                <div className="text-md box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
                   <input
                     className="bg-transparent"
                     type="text"
@@ -252,7 +261,7 @@ export default function found_form() {
                     required={true}
                   />
                 </div>
-                <div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
+                <div className="text-md box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
                   <input
                     className="bg-transparent"
                     type="tel"
@@ -261,7 +270,7 @@ export default function found_form() {
                     required={true}
                   />
                 </div>
-                <div className="text-sm box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
+                <div className="text-md box-border h-11 w-96 border-2 border-solid border-slate-400 rounded-md mb-5 flex align-middle bg-[#EBEFFA] pl-3">
                   <input
                     className="bg-transparent"
                     type="email"

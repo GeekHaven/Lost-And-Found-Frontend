@@ -8,23 +8,23 @@ import React from "react";
 //     });
 // }
 const Dropdown = ({ options, setValue, fieldNames }) => {
-    const handleChange = (value) => {
-        setValue(value);
-    };
+  const handleChange = (value) => {
+    setValue(value);
+  };
 
-    return (
-        <Select
-            // mode="tags"
-            style={{
-                width: "100%",
-                backgroundColor: "#EBEFFA !important",
-            }}
-            placeholder="Category"
-            onChange={handleChange}
-            fieldNames={fieldNames}
-            options={options}
-            showArrow={false}
-        />
-    );
+  return (
+    <Select
+      // mode="tags"
+      style={{
+        width: "100%",
+        backgroundColor: "#EBEFFA !important",
+      }}
+      placeholder={<span className="opacity-40 text-md">Categories</span>}
+      onChange={handleChange}
+      fieldNames={fieldNames}
+      options={options}
+      showArrow={false}
+    />
+  );
 };
 export default Dropdown;
