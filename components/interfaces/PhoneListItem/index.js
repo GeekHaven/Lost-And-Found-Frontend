@@ -24,7 +24,17 @@ export default function Phone_ListItem({ item, fref }) {
 
   return (
     <>
-      <div className="box flex justify-between" ref={fref}>
+      <div
+        className="box flex justify-between"
+        ref={fref}
+        onClick={() => {
+          if (router.pathname === "/lost") {
+            LostItemModal({ id: item.id, user: user, router: router });
+          } else {
+            FoundItemModal({ id: item.id, user: user, router: router });
+          }
+        }}
+      >
         <div className="w-32 text-center">
           <Image
             src={item.image || ListItemPlaceholder}
@@ -48,16 +58,7 @@ export default function Phone_ListItem({ item, fref }) {
           </div>
         </div>
         <div className="flex items-center">
-          <div
-            className="mt-0 w-5 h-5"
-            onClick={() => {
-              if (router.pathname === "/lost") {
-                LostItemModal({ id: item.id, user: user, router: router });
-              } else {
-                FoundItemModal({ id: item.id, user: user, router: router });
-              }
-            }}
-          >
+          <div className="mt-0 w-5 h-5">
             <Image src={side}></Image>
           </div>
         </div>
