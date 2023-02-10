@@ -1,12 +1,9 @@
 import PhoneListItem from "../../interfaces/PhoneListItem";
-import SortPlaceholder from "../../../assets/logo/sort.svg";
 import { BsTriangleFill } from "react-icons/bs";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { useState } from "react";
-export default function Phone_List({ data, fref, sortBy, setSortBy }) {
-	const router = useRouter();
-	return (
+import { forwardRef } from "react";
+
+let Phone_List = forwardRef(({ data, fref, sortBy, setSortBy }, ref) => {
+  return (
     <div className="mt-20 px-36 md:px-12 mb-12 flex flex-col gap-10">
       <div className="flex flex-row justify-between items-center">
         <div className="text-3xl font-semibold text-[#304AC1] ">
@@ -33,7 +30,7 @@ export default function Phone_List({ data, fref, sortBy, setSortBy }) {
           </span>
         </button>
       </div>
-      <div className="w-full">
+      <div className="w-full" ref={ref}>
         {data &&
           data.length > 0 &&
           data.map((item, i) => {
@@ -49,4 +46,6 @@ export default function Phone_List({ data, fref, sortBy, setSortBy }) {
       </div>
     </div>
   );
-}
+});
+
+export default Phone_List;

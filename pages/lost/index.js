@@ -23,6 +23,8 @@ export default function Lost() {
     [selectedCategory, setSelectedCategory] = useState(""),
     [sortBy, setSortBy] = useState(true);
 
+  let scrollToRef = useRef();
+
   let lastLoadedPage = 0;
 
   const loadMoreItems = async () => {
@@ -100,6 +102,11 @@ export default function Lost() {
     if (!loadPage) {
       setLoadPage(true);
     }
+    if (scrollToRef?.current)
+      scrollToRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
   }, [sortBy, query, selectedCategory]);
 
   useEffect(() => {
@@ -127,6 +134,7 @@ export default function Lost() {
         {window.innerWidth > 600 && (
           <>
             <List
+              ref={scrollToRef}
               fref={lastItemRef}
               data={data}
               sortBy={sortBy}
@@ -136,6 +144,7 @@ export default function Lost() {
         )}
         {window.innerWidth <= 600 && (
           <PhoneList
+            ref={scrollToRef}
             fref={lastItemRef}
             data={data}
             sortBy={sortBy}
