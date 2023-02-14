@@ -102,11 +102,11 @@ export default function Lost() {
     if (!loadPage) {
       setLoadPage(true);
     }
-    if (scrollToRef?.current)
-      scrollToRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    // if (scrollToRef?.current)
+    //   scrollToRef.current.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    //   });
   }, [sortBy, query, selectedCategory]);
 
   useEffect(() => {

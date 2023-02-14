@@ -100,11 +100,11 @@ export default function Found() {
     if (!loadPage) {
       setLoadPage(true);
     }
-    if (scrollToRef?.current)
-      scrollToRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    // if (scrollToRef?.current)
+    //   scrollToRef.current.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    //   });
   }, [sortBy, query, selectedCategory]);
 
   useEffect(() => {
