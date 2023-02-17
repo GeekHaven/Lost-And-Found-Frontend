@@ -18,50 +18,50 @@ Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
-  const publicPath = ["/", "/signin", "/team"];
-  const router = useRouter();
-  const [show, setShow] = useState(false),
-    [isLoggedIn, setIsLoggedIn] = useState(false),
-    [user, setUser] = useState(null);
+    const publicPath = ["/", "/signin", "/team", "/_offline"];
+    const router = useRouter();
+    const [show, setShow] = useState(false),
+        [isLoggedIn, setIsLoggedIn] = useState(false),
+        [user, setUser] = useState(null);
 
-  // check if user is logged in
-  async function checkUsr() {
-    let jwt_token = getAccessToken();
-    let redirect = false;
-    if (jwt_token) {
-      let res = await get("/self");
-      if (res.data?.status) {
-        setIsLoggedIn(true);
-        setUser(res.data);
-      } else {
-        redirect = true;
-      }
+    // check if user is logged in
+    async function checkUsr() {
+        let jwt_token = getAccessToken();
+        let redirect = false;
+        if (jwt_token) {
+            let res = await get("/self");
+            if (res.data?.status) {
+                setIsLoggedIn(true);
+                setUser(res.data);
+            } else {
+                redirect = true;
+            }
+        }
+        if (publicPath.includes(router.asPath)) {
+            setShow(true);
+            return;
+        }
+        setShow(false);
+        if (!jwt_token || redirect) {
+            router.push("/");
+        }
+        setShow(true);
     }
-    if (publicPath.includes(router.asPath)) {
-      setShow(true);
-      return;
-    }
-    setShow(false);
-    if (!jwt_token || redirect) {
-      router.push("/");
-    }
-    setShow(true);
-  }
 
-  useEffect(() => {
-    if (!router.isReady) return; //if router is not availble till then return
-    checkUsr();
-  }, [isLoggedIn, router]);
+    useEffect(() => {
+        if (!router.isReady) return; //if router is not availble till then return
+        checkUsr();
+    }, [isLoggedIn, router]);
 
-  return (
-    <NextUIProvider>
-      <UserContext.Provider
-        value={{ isLoggedIn, setIsLoggedIn, user, setUser }}
-      >
-        {show ? <Component {...pageProps} /> : <Loader />}
-      </UserContext.Provider>
-    </NextUIProvider>
-  );
+    return (
+        <NextUIProvider>
+            <UserContext.Provider
+                value={{ isLoggedIn, setIsLoggedIn, user, setUser }}
+            >
+                {show ? <Component {...pageProps} /> : <Loader />}
+            </UserContext.Provider>
+        </NextUIProvider>
+    );
 }
 
 export default MyApp;
